@@ -1,35 +1,33 @@
 class CircleWave {
   PVector pos;
-  float aOff;
-
   float r;
-  float a;
-  float t;
+  float f;
+  float s;
+  float h;
 
-  CircleWave(float x, float y, float _r, float _a, float _t) {
-    pos = new PVector(x, y);
-    r = _r;
-    a = _a;
-    t = _t;
+  CircleWave() {
+    pos = new PVector(random(width), random(height));
+    r = random(50, (width+height)/4);
+    f = TWO_PI/round(random(6, 10));
+    s = random(120, 300);
+    h = random(255);
   }
 
   void display() {   
     pushMatrix();
     translate(pos.x, pos.y);
 
-    beginShape();
-    for (float i = 0; i < TWO_PI; i+= 0.001) {
-      float radius = cos(TWO_PI * ((i + aOff) / QUARTER_PI)) * (aOff * a);
+    fill((h+frameCount/(s*5)*255)%255, 255, 255);
 
-      float x = (r + radius) * cos(i);
-      float y = (r + radius) * sin(i);
+    beginShape();
+    for (float t = 0; t < TWO_PI; t+= 0.001) {
+      float wave = sin(t/f*TWO_PI+sin(frameCount/s*TWO_PI)*TWO_PI)*sin(frameCount/(s*5)*TWO_PI)*r/5.0;
+
+      float x = (r+wave)*cos(t);
+      float y = (r+wave)*sin(t);
       vertex(x, y);
     }
     endShape();
     popMatrix();
-  }
-
-  void update() {
-    aOff = map(cos(TWO_PI * (frameCount / t)), 1, -1, 0, 1);
   }
 }
