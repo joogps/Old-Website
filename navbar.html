@@ -2,7 +2,7 @@
 <html>
 <head>
 	<style>
-	ul {
+	ul #navbar {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
@@ -13,11 +13,11 @@
 		top: 0;
 	}
 
-	li {
+	ul #navbar > li {
 		float: left;
 	}
 
-	li a {
+	ul #navbar > li a {
 		display: block;
 		color: white;
 		text-align: center;
@@ -25,14 +25,14 @@
 		text-decoration: none;
 	}
 
-	li a:hover {
+	ul #navbar > li a:hover {
 		background-color: #111;
 		text-decoration: none;
 	}
 </style>
 </head>
 <body>
-	<ul>
+	<ul id="navbar">
 		<li><a href="index.html">Home</a></li>
 		<li><a href="repositories.html">Repositories</a></li>
 		<li><a href="contact.html">Contact</a></li>
