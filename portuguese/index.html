@@ -6,43 +6,9 @@ layout: default
 <html>
 <head>
 	<link rel="shortcut icon" href="favicon.ico">
-	<style>
-	ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-		background-color: #333;
-		position: -webkit-sticky;
-		position: sticky;
-		top: 0;
-	}
-
-	li {
-		float: left;
-	}
-
-	li a {
-		display: block;
-		color: white;
-		text-align: center;
-		padding: 14px 16px;
-		text-decoration: none;
-	}
-
-	li a:hover {
-		background-color: #111;
-		text-decoration: none;
-	}
-</style>
 </head>
 <body>
-	<ul>s
-		<li><a href="index.html">Início</a></li>
-		<li><a href="repositories.html">Repositórios</a></li>
-		<li><a href="contact.html">Contato</a></li>
-		<li><a href="../index.html">Inglês</a></li>
-	</ul>
+	<div id="navbar"></div>
 
 	<h1>Sobre mim</h1>
 	<p> Sou um adolescente programador brasileiro que tenta aprender conceitos matemáticos, artísticos e científicos por meio da programação. Eu comecei a aprender a "codar" com a <a href=https://www.khanacademy.org>Khan Academy</a>, a qual utiliza de uma biblioteca JavaScript baseada em <a href=https://processing.org/>Processing</a>, uma linguagem de programação baseada em Java, para ensinar os seus alunos. No começo de 2018, me interessei em Processing em si e comecei a assistir vídeos do <a href=https://shiffman.net/>Daniel Shiffman</a> sobre a mesma, os quais estão disponíveis <a href=https://www.youtube.com/user/shiffman>aqui</a>. Desde então programei todas as minhas ideias e desejos.</p>
@@ -56,4 +22,10 @@ layout: default
 	}{% endhighlight %}
 </p>
 </body>
+<script src="../jquery-3.3.1.js"></script>
+<script>
+	$(function(){
+		$("#navbar").load("navbar.html");
+	});	
+</script>
 </html>
