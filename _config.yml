@@ -1,6 +1,6 @@
 theme: jekyll-theme-slate
 title: João Gabriel
-tagline: A Processing developer (and maybe some other stuff).
+description: 
 github:
   repository_url: https://github.com/joogps
 syntax-highlighting:
