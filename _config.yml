@@ -1,8 +1,7 @@
 theme: jekyll-theme-slate
 title: João Gabriel
 description: 
-github:
-  repository_url: https://github.com/joogps
+show_downloads: false
 syntax-highlighting:
   enabled : true
   css: syntax.css
