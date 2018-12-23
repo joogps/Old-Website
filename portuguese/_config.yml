@@ -1,9 +1,2 @@
-theme: jekyll-theme-slate
-title: João Gabriel
 description: Um desenvolvedor em Processing. (e umas outras coisas).
-github:
-  repository_url: https://github.com/joogps
-syntax-highlighting:
-  enabled : true
-  css: syntax.css
 
