@@ -2,7 +2,7 @@ theme: jekyll-theme-slate
 title: João Gabriel
 description: A Processing developer (and maybe some other stuff).
 github:
-  repository_url: none
+  is_project_page: false
 syntax-highlighting:
   enabled : true
   css: syntax.css
