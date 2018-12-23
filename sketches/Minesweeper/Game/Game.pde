@@ -1,7 +1,5 @@
-/* @pjs preload="sketches/Minesweeper/Assets/bomb.png"; */
-/* @pjs preload="sketches/Minesweeper/Assets/flag.png"; */
-/* @pjs preload="sketches/Minesweeper/Assets/digital.otf"; */
-/* @pjs preload="sketches/Minesweeper/Assets/pixelated.ttf"; */
+/* @pjs preload="sketches/Minesweeper/Assets/bomb.png,sketches/Minesweeper/Assets/flag.png"; */
+/* @pjs font="sketches/Minesweeper/Assets/digital.otf,sketches/Minesweeper/Assets/pixelated.ttf"; */
 
 Tile[][] tiles;
 UI ui;
