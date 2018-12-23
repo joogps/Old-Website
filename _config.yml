@@ -7,6 +7,3 @@ syntax-highlighting:
   enabled : true
   css: syntax.css
 theme: jekyll-theme-slate
-footer-links:
-  github: https://github.com/joogps
-  twitter: https://twitter.com/joogps
