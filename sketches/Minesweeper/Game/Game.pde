@@ -1,3 +1,8 @@
+/* @pjs preload="..\\Assets\\bomb.png"; */
+/* @pjs preload="..\\Assets\\flag.png"; */
+/* @pjs preload="..\\Assets\\digital.otf"; */
+/* @pjs preload="..\\Assets\\pixelated.ttf"; */
+
 Tile[][] tiles;
 UI ui;
 
