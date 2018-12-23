@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="favicon.ico">
+	<style>
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+	}
+
+	li {
+		float: left;
+	}
+
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	li a:hover {
+		background-color: #111;
+		text-decoration: none;
+	}
+</style>
+</head>
+<body>
+	<ul>s
+		<li><a href="index.html">Home</a></li>
+		<li><a href="repositories.html">Repositories</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		<li><a href="portuguese/index.html">Português</a></li>
+	</ul>
+
+	<h1>About me</h1>
+	<p> I'm a teenager, brazilian developer who tries to learn mathematical, artistic and scientific concepts through code. I started to learn programming with <a href=https://www.khanacademy.org>Khan Academy</a>, which uses a JavaScript library based on <a href=https://processing.org/>Processing</a>, a Java based programming language. In early 2018, I became interested on the language itself and started to watch <a href=https://shiffman.net/>Daniel Shiffman</a>'s videos about it, which are available <a href=https://www.youtube.com/user/shiffman>here</a>. Since then I've programmed all of my ideas and wishes.</p>
+
+	<h1>Processing</h1>
+	<p> <a href=https://processing.org/>Processing</a> is a Java based open-source programming language and integrated development environment (which can be downloaded <a href=https://processing.org/download/>here</a>) focused on eletronic art. It's used all arround the world with lots of different purposes and has led to many other projects, including <a href=http://p5js.org/>p5.js</a>, <a href=https://py.processing.org/>Processing.py</a> and <a href=http://processingjs.org/>Processing.js</a>.
+
+		{% highlight java %}
+	void setup() {
+		print("Hello World!");
+	}{% endhighlight %}
+</p>
+</body>
+</html>
