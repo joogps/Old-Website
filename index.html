@@ -6,8 +6,42 @@ layout: default
 <html>
 <head>
 	<link rel="shortcut icon" href="favicon.ico">
+	<style>
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+		position: -webkit-sticky; /* Safari */
+		position: sticky;
+		top: 0;
+	}
+
+	li {
+		float: left;
+	}
+
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	li a:hover {
+		background-color: #111;
+	}
+</style>
 </head>
 <body>
+	<ul>s
+		<li><a class="active" href="#home">Home</a></li>
+		<li><a href="#news">News</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+
 	<h1>About me</h1>
 	<p> I'm a teenager, brazilian developer who tries to learn mathematical, artistic and scientific concepts through code. I started to learn programming with <a href=https://www.khanacademy.org>Khan Academy</a>, which uses a JavaScript library based on <a href=https://processing.org/>Processing</a>, a Java based programming language. In early 2018, I became interested on the language itself and started to watch <a href=https://shiffman.net/>Daniel Shiffman</a>'s videos about it, which are available <a href=https://www.youtube.com/user/shiffman>here</a>. Since then I've programmed all of my ideas and wishes.</p>
 
@@ -16,13 +50,13 @@ layout: default
 
 	{% highlight java %}
 	void setup() {
-		print("Hello World!");
-	}{% endhighlight %}	
+	print("Hello World!");
+}{% endhighlight %}	
 
-	<ul style="display:inline; text-align:center">
-		<li style="display:inline">teste1</li>
-		<li style="display:inline">teste2</li>
-		<li style="display:inline">teste3</li>
-	</ul>
+<ul>
+	<li>teste1</li>
+	<li>teste2</li>
+	<li>teste3</li>
+</ul>
 </body>
 </html>
