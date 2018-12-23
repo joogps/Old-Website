@@ -1,7 +1,7 @@
-/* @pjs preload="../Assets/bomb.png"; */
-/* @pjs preload="../Assets/flag.png"; */
-/* @pjs preload="../Assets/digital.otf"; */
-/* @pjs preload="../Assets/pixelated.ttf"; */
+/* @pjs preload="sketches/Minesweeper/Assets/bomb.png"; */
+/* @pjs preload="sketches/Minesweeper/Assets/flag.png"; */
+/* @pjs preload="sketches/Minesweeper/Assets/digital.otf"; */
+/* @pjs preload="sketches/Minesweeper/Assets/pixelated.ttf"; */
 
 Tile[][] tiles;
 UI ui;
@@ -80,7 +80,7 @@ void mouseReleased() {
 void win() {
   win = true;
   ui.countTime = false;
-  
+
   for (int x = 0; x < cols; x++) {
     for (int y = 0; y < rows; y++) {
       if (tiles[x][y].isBomb) {
@@ -106,7 +106,7 @@ void gameOver() {
 void reveal(int _x, int _y) {
   int revealWidth =  floor(cols/3);
   int revealHeight = floor(rows/3);
-  
+
   for (int x = _x + (_x <= 1 || _x >= cols - 2 ? ((_x <= 1 ? (_x == 0 ? 0 : -1) : (_x == cols - 1 ? -(revealWidth-1) : -(revealWidth-2)))) : -floor(revealWidth/2)); x <= _x + (_x <= 1 || _x >= cols - 2 ? ((_x <= 1 ? (_x == 0 ? (revealWidth-1) : (revealWidth-2)) : (_x == cols ? 0 : 1))) : floor(revealWidth/2)); x++) {
     for (int y = _y + (_y <= 1 || _y >= rows - 2 ? ((_y <= 1 ? (_y == 0 ? 0 : -1) : (_y == rows - 1 ? -(revealHeight-1) : -(revealHeight-2)))) : -floor(revealHeight/2)); y <= _y + (_y <= 1 || _y >= rows - 2 ? ((_y <= 1 ? (_y == 0 ? (revealHeight-1) : revealHeight-2) : (_y == rows ? 0 : 1))) : floor(revealHeight/2)); y++) {
       if (x >= 0 && y >= 0 && x < cols && y < rows && !tiles[x][y].isBomb &&!tiles[x][y].showing) {
@@ -171,7 +171,7 @@ void setGame() {
   ui.startingMillis = millis();
   ui.time = 0;
   ui.countTime = false;
-  
+
   win = false;
   gameOver = false;
 }
@@ -185,8 +185,8 @@ void checkWin() {
       }
     }
   }
-  
-  if(numShowing >= cols*rows){
+
+  if (numShowing >= cols*rows) {
     win();
   }
 }
