@@ -6,3 +6,4 @@ github:
 syntax-highlighting:
   enabled : true
   css: syntax.css
+theme: jekyll-theme-slate
