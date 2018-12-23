@@ -1,4 +1,4 @@
-title: João Gabriel
+name: João Gabriel
 description: A Processing developer (and maybe some other stuff).
 github:
   is_project_page: false
@@ -7,3 +7,6 @@ syntax-highlighting:
   enabled : true
   css: syntax.css
 theme: jekyll-theme-slate
+footer-links:
+  github: joogps
+  twitter: joogps
