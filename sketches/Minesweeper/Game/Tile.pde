@@ -55,7 +55,7 @@ class Tile {
         textFont(pixelated);
         textSize((w+h)*0.3);
         textAlign(CENTER, CENTER);
-        text(bombsNear, position.x+w/2, position.y+h*4.5/10+textDescent();)
+        text(bombsNear, position.x+w/2, position.y+h*4.5/10+textDescent());
         colorMode(RGB);
       }
     }
