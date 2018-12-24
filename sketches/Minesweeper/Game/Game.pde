@@ -24,17 +24,14 @@ boolean gameOver;
 void setup() {
   size(701, 851);
 
-  bomb = loadImage("..//Assets//bomb.png");
-  flag = loadImage("..//Assets//flag.png");
+  bomb = loadImage("sketches/Minesweeper/Assets/bomb.png");
+  flag = loadImage("sketches/Minesweeper/Assets/bomb.png");
 
   digital = createFont("digital", 1);
   pixelated = createFont("pixelated", 1);
 
   cols = 10;
   rows = 10;
-
-  surface.setTitle("Minesweeper");
-  surface.setIcon(bomb);
 
   ui = new UI();
 
