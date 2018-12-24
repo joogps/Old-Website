@@ -4,45 +4,45 @@ class UI {
 
   boolean countTime;
   int startingMillis;
-  
+
   LevelSelector[] levelSelectors;
 
   UI() {
     bombs = numBombs;
-    
+
     int[][] lSColsAndRows = {{5, 5}, {10, 10}, {15, 15}, {20, 20}, {25, 25}};
     levelSelectors = new LevelSelector[lSColsAndRows.length];
-    
-    for(int i = 0; i < levelSelectors.length; i++)
-      levelSelectors[i] = new LevelSelector(int(width/2+(-2.5*75)+75*i), 35, 75, 75, lSColsAndRows[i][0], lSColsAndRows[i][1], lSColsAndRows[i][0] == cols && lSColsAndRows[i][1] == rows);
+
+    for (int i = 0; i < levelSelectors.length; i++)
+      levelSelectors[i] = new LevelSelector(width/2+(-2.5*width/10.0)+width/10.0*i, spacing/2.0-width/20.0, width/10.0, width/10.0, lSColsAndRows[i][0], lSColsAndRows[i][1], lSColsAndRows[i][0] == cols && lSColsAndRows[i][1] == rows);
   }
 
   void show() {
     fill(0);
-    rect(20, 35, 125, 75);
+    rect(20, spacing/4.0, width/5.0, spacing/2.0);
 
     fill(0);
-    rect(width - 20 - 125, 35, 125, 75);
+    rect(width-20-width/5.0, spacing/4.0, width/5.0, spacing/2.0);
 
     textFont(digital);
-    textSize(75);
+    textSize(65);
 
-    textAlign(LEFT, TOP);
+    textAlign(CENTER, CENTER);
     fill(60, 0, 0);
-    text("888", 32, 32);
+    text("888", 20+width/10.0, spacing/2.0-textDescent()/2.0);
 
 
     fill(255, 0, 0);
-    text(nf(constrain(bombs, 0, cols * rows), 3), 32, 32);
+    text(nf(constrain(bombs, 0, cols*rows), 3), 20+width/10.0, spacing/2.0-textDescent()/2.0);
 
     stroke(255);
 
-    textAlign(RIGHT, TOP);
+    textAlign(CENTER, CENTER);
     fill(60, 0, 0);
-    text("888", width - 32, 32);
+    text("888", width-20-width/10.0, spacing/2.0-textDescent()/2.0);
 
     fill(255, 0, 0);
-    text(nf(time, 3), width - 32, 32);
+    text(nf(time, 3), width-20-width/10.0, spacing/2.0-textDescent()/2.0);
 
     for (int i = 0; i < levelSelectors.length; i++) {
       levelSelectors[i].show();
@@ -51,7 +51,7 @@ class UI {
 
   void updateTime() {
     if (countTime) {
-      time = (millis() - startingMillis) / 1000;
+      time = (millis()-startingMillis)/1000;
     }
   }
 

@@ -21,20 +21,23 @@ float h;
 boolean win;
 boolean gameOver;
 
+int spacing;
+
 void setup() {
   size(640, 760);
 
-  bomb = loadImage("sketches/Minesweeper/Assets/bomb.png");
-  flag = loadImage("sketches/Minesweeper/Assets/bomb.png");
+  bomb = loadImage("../Assets/bomb.png");
+  flag = loadImage("../Assets/bomb.png");
 
-  digital = createFont("digital", 1);
-  pixelated = createFont("pixelated", 1);
+  digital = createFont("../Assets/digital.otf", 1);
+  pixelated = createFont("../Assets/pixelated.ttf", 1);
 
   cols = 10;
   rows = 10;
 
-  ui = new UI();
+  spacing = 150;
 
+  ui = new UI();
   setGame();
 }
 
@@ -118,8 +121,6 @@ void reveal(int _x, int _y) {
 }
 
 void setGame() {
-  int spacing = 150;
-
   w = width/float(cols)-1/float(width);
   h = height/float(rows)-1/float(height-spacing)-(spacing/float(rows));
 
