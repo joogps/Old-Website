@@ -27,7 +27,7 @@ void setup() {
   size(640, 760);
 
   bomb = loadImage("sketches/Minesweeper/Assets/bomb.png");
-  flag = loadImage("sketches/Minesweeper/Assets/bomb.png");
+  flag = loadImage("sketches/Minesweeper/Assets/flag.png");
 
   digital = createFont("Assets/digital.otf", 1);
   pixelated = createFont("Assets/pixelated.ttf", 1);
