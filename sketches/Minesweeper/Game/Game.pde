@@ -26,8 +26,8 @@ void setup() {
   bomb = loadImage("..//Assets//bomb.png");
   flag = loadImage("..//Assets//flag.png");
 
-  digital = createFont("..//Assets//digital.otf", 1);
-  pixelated = createFont("..//Assets//pixelated.ttf", 1);
+  digital = createFont("digital", 1);
+  pixelated = createFont("pixelated", 1);
 
   cols = 10;
   rows = 10;
