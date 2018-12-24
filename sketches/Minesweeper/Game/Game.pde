@@ -1,5 +1,6 @@
 /* @pjs reload="sketches/Minesweeper/Assets/bomb.png,sketches/Minesweeper/Assets/flag.png"; */
-/* @pjs font="../Assets/digital.otf,../Assets/pixelated.ttf"; */
+  
+/* @pjs font="../Assets/digital.otf"; */
 
 Tile[][] tiles;
 UI ui;
@@ -30,7 +31,7 @@ void setup() {
   flag = loadImage("sketches/Minesweeper/Assets/flag.png");
 
   digital = createFont("digital", 1);
-  pixelated = createFont("pixelated", 1);
+  pixelated = createFont("digital", 1);
 
   cols = 10;
   rows = 10;
