@@ -31,7 +31,7 @@ void setup() {
   flag = loadImage("sketches/Minesweeper/Assets/flag.png");
 
   digital = createFont("pixelated.ttf", 1);
-  pixelated = createFont("pixelated.tt"f, 1);
+  pixelated = createFont("pixelated.ttf", 1);
 
   cols = 10;
   rows = 10;
