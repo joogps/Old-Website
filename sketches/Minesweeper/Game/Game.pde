@@ -30,7 +30,7 @@ void setup() {
   flag = loadImage("sketches/Minesweeper/Assets/bomb.png");
 
   digital = createFont("Assets/digital.otf", 1);
-  pixelated = createFont(As"sets/pixelated.ttf", 1);
+  pixelated = createFont("Assets/pixelated.ttf", 1);
 
   cols = 10;
   rows = 10;
