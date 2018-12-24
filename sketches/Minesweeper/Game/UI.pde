@@ -13,9 +13,8 @@ class UI {
     int[][] lSColsAndRows = {{5, 5}, {10, 10}, {15, 15}, {20, 20}, {25, 25}};
     levelSelectors = new LevelSelector[lSColsAndRows.length];
     
-    for(int i = 0; i < levelSelectors.length; i++){
-      levelSelectors[i] = new LevelSelector(int(width / 2 + (-2.5*75) + 75 * i), 35, 75, 75, lSColsAndRows[i][0], lSColsAndRows[i][1], lSColsAndRows[i][0] == cols && lSColsAndRows[i][1] == rows);
-    }
+    for(int i = 0; i < levelSelectors.length; i++)
+      levelSelectors[i] = new LevelSelector(int(width/2+(-2.5*75)+75*i), 35, 75, 75, lSColsAndRows[i][0], lSColsAndRows[i][1], lSColsAndRows[i][0] == cols && lSColsAndRows[i][1] == rows);
   }
 
   void show() {
