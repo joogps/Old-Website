@@ -1,5 +1,5 @@
 /* @pjs reload="sketches/Minesweeper/Assets/bomb.png,sketches/Minesweeper/Assets/flag.png"; 
-        font="sketches/Minesweeper/Assets/digital.otf,sketches/Minesweeper/Assets/pixelated.ttf"; 
+        font="sketches/Minesweeper/Assets/pixelated.ttf,sketches/Minesweeper/Assets/digital.otf"; 
 */
 
 Tile[][] tiles;
