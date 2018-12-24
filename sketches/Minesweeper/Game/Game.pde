@@ -122,8 +122,9 @@ void reveal(int _x, int _y) {
 }
 
 void setGame() {
-  w = width/float(cols)-1/float(width);
   h = height/float(rows)-1/float(height-spacing)-(spacing/float(rows));
+  w = width/float(cols)-1/float(cols);
+  h = height/float(rows)-1/float(rows)-(spacing/float(rows));
 
   tiles = new Tile[cols][rows];
   for (int x = 0; x < cols; x++) {
