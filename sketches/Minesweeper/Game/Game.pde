@@ -23,11 +23,11 @@ boolean gameOver;
 void setup() {
   size(701, 851);
 
-  bomb = loadImage("bomb.png");
-  flag = loadImage("flag.png");
+  bomb = loadImage("..//Assets//bomb.png");
+  flag = loadImage("..//Assets//flag.png");
 
-  digital = createFont("digital.otf", 1);
-  pixelated = createFont("pixelated.ttf", 1);
+  digital = createFont("..//Assets//digital.otf", 1);
+  pixelated = createFont("..//Assets//pixelated.ttf", 1);
 
   cols = 10;
   rows = 10;
