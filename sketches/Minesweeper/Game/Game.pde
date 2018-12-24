@@ -88,7 +88,7 @@ void winGame() {
   }
 }
 
-void gameOver() {
+void gameOverGame() {
   gameOver = true;
   ui.countTime = false;
 

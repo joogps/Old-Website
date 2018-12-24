@@ -88,7 +88,7 @@ class Tile {
           }
         } else {
           bombExploded = true;
-          gameOver();
+          gameOverGame();
         }
       } else {
         if (ui.bombs > 0 || isFlagged) {
