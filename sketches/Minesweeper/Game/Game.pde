@@ -17,8 +17,8 @@ int numBombs;
 
 float[] size;
 
-Boolean win;
-Boolean gameOver;
+boolean win;
+boolean gameOver;
 
 void setup() {
   size(701, 851);
@@ -36,6 +36,9 @@ void setup() {
   surface.setIcon(bomb);
 
   ui = new UI();
+
+  win = false;
+  gameOver = false;
 
   setGame();
 }
