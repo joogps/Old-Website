@@ -1,5 +1,5 @@
 /* @pjs preload="sketches/Minesweeper/Assets/bomb.png,sketches/Minesweeper/Assets/flag.png"; */
-/* @pjs font="Assets/digital.otf,Assets/pixelated.ttf"; */
+/* @pjs font="sketches/Minesweeper/Assets/digital.otf,sketches/Minesweeper/Assets/pixelated.ttf"; */
 
 Tile[][] tiles;
 UI ui;
@@ -23,11 +23,11 @@ boolean gameOver;
 void setup() {
   size(701, 851);
 
-  bomb = loadImage("..\\Assets\\bomb.png");
-  flag = loadImage("..\\Assets\\flag.png");
+  bomb = loadImage("bomb.png");
+  flag = loadImage("flag.png");
 
-  digital = createFont("..\\Assets\\digital.otf", 1);
-  pixelated = createFont("..\\Assets\\pixelated.ttf", 1);
+  digital = createFont("digital.otf", 1);
+  pixelated = createFont("pixelated.ttf", 1);
 
   cols = 10;
   rows = 10;
