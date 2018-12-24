@@ -26,11 +26,11 @@ int spacing;
 void setup() {
   size(640, 760);
 
-  bomb = loadImage("../Assets/bomb.png");
-  flag = loadImage("../Assets/bomb.png");
+  bomb = loadImage("sketches/Minesweeper/Assets/bomb.png");
+  flag = loadImage("sketches/Minesweeper/Assets/bomb.png");
 
-  digital = createFont("../Assets/digital.otf", 1);
-  pixelated = createFont("../Assets/pixelated.ttf", 1);
+  digital = createFont("Assets/digital.otf", 1);
+  pixelated = createFont(As"sets/pixelated.ttf", 1);
 
   cols = 10;
   rows = 10;
