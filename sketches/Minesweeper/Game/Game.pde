@@ -15,7 +15,8 @@ int rows;
 
 int numBombs;
 
-float[] size;
+float w;
+float h;
 
 boolean win;
 boolean gameOver;
@@ -122,14 +123,13 @@ void reveal(int _x, int _y) {
 void setGame() {
   int spacing = 150;
 
-  size = new float[2];
-  size[0] = width / float(cols);
-  size[1] = height / float(rows);
+  w = width / float(cols);
+  h = height / float(rows);
 
   tiles = new Tile[cols][rows];
   for (int x = 0; x < cols; x++) {
     for (int y = 0; y < rows; y++) {
-      tiles[x][y] = new Tile(int(x * size[0]), int(y * (size[1] - (spacing / float(rows)))) + spacing, size[0], size[1] - (spacing / rows));
+      tiles[x][y] = new Tile(int(x * w), int(y * (h - (spacing / float(rows)))) + spacing, w, h - (spacing / rows));
     }
   }
 
