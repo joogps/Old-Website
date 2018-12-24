@@ -1,7 +1,7 @@
 float levels;
 
-void settings() {
-  size(640, round(sin(TWO_PI/6.0)*640));
+void setup() {
+  size(640, 554);
 }
 
 void draw() {
