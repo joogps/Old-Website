@@ -11,7 +11,7 @@ class Tile {
 
   int bombsNear = 0;
 
-  Tile(int x, int y, float size0, float size1) {
+  Tile(float x, float y, float size0, float size1) {
     position = new PVector(x, y);
     size = new float[2];
     size[0] = size0;

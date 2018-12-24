@@ -22,13 +22,13 @@ boolean win;
 boolean gameOver;
 
 void setup() {
-  size(701, 851);
+  size(640, 760);
 
   bomb = loadImage("sketches/Minesweeper/Assets/bomb.png");
   flag = loadImage("sketches/Minesweeper/Assets/bomb.png");
 
-  digital = createFont("digital", 1);
-  pixelated = createFont("pixelated", 1);
+  digital = createFont("digital.otf", 1);
+  pixelated = createFont("pixelated.ttf", 1);
 
   cols = 10;
   rows = 10;
@@ -120,13 +120,13 @@ void reveal(int _x, int _y) {
 void setGame() {
   int spacing = 150;
 
-  w = width / float(cols);
-  h = height / float(rows);
+  w = width/float(cols);
+  h = height/float(rows)-1/float(height)-(spacing/float(rows));
 
   tiles = new Tile[cols][rows];
   for (int x = 0; x < cols; x++) {
     for (int y = 0; y < rows; y++) {
-      tiles[x][y] = new Tile(int(x * w), int(y * (h - (spacing / float(rows)))) + spacing, w, h - (spacing / rows));
+      tiles[x][y] = new Tile(x*w, y*h+spacing, w, h);
     }
   }
 
