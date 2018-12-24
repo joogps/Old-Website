@@ -37,9 +37,6 @@ void setup() {
 
   ui = new UI();
 
-  win = false;
-  gameOver = false;
-
   setGame();
 }
 
@@ -78,7 +75,7 @@ void mouseReleased() {
   ui.updateSelectors("release");
 }
 
-void win() {
+void winGame() {
   win = true;
   ui.countTime = false;
 
@@ -188,6 +185,6 @@ void checkWin() {
   }
 
   if (numShowing >= cols*rows) {
-    win();
+    winGame();
   }
 }
