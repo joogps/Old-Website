@@ -26,27 +26,27 @@ class Tile {
         drawTile(position.x, position.y, w, h);
 
         if (isFlagged) {
-          image(flag, position.x+w/2+1, position.y+h/2+1, w/7*5, h/7*5);
+          image(flag, position.x+w/2.0+1, position.y+h/2.0+1, w/7*5.0, h/7*5.0);
         }
       } else {
         fill(130);
         stroke(0);
-        rect(position.x, position.y, w + 1, h + 1);
+        rect(position.x, position.y, w+1, h+1);
       }
     } else {
       fill(win ? isBomb ? color(0, 255, 0) : color(130) : bombExploded ? color(255, 0, 0) : color(130));
       stroke(0);
-      rect(position.x, position.y, w + 1, h + 1);
+      rect(position.x, position.y, w+1, h+1);
 
       if (isBomb) {
         fill(50);
-        image(bomb, position.x+w/2+1, position.y+h/2+1, w*5/7, h*5/7);
+        image(bomb, position.x+w/2.0+1, position.y+h/2.0+1, w*5/7.0, h*5/7.0);
 
         if (isFlagged && !bombExploded) {
           stroke(255, 0, 0);
-          strokeWeight((w+h)/2*0.1);
-          line(position.x+w/6, position.y+h/6, position.x+w*5/6, position.y+h*5/6);
-          line(position.x+w*5/6, position.y+h/6, position.x+w/6, position.y+h*5/6);
+          strokeWeight((w+h)*0.05);
+          line(position.x+w/6.0, position.y+h/6.0, position.x+w*5/6.0, position.y+h*5/6.0);
+          line(position.x+w*5/6.0, position.y+h/6.0, position.x+w/6.0, position.y+h*5/6.0);
           strokeWeight(1);
         }
       } else if (bombsNear > 0) {
@@ -55,7 +55,7 @@ class Tile {
         textFont(pixelated);
         textSize((w+h)*0.3);
         textAlign(CENTER, CENTER);
-        text(bombsNear, position.x+w/2, position.y+h*4.5/10+textDescent());
+        text(bombsNear, position.x+w/2.0, position.y+h*4.5/10.0+textDescent()/2.0);
         colorMode(RGB);
       }
     }
