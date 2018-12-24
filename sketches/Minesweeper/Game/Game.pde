@@ -17,8 +17,8 @@ int numBombs;
 
 float[] size;
 
-boolean win;
-boolean gameOver;
+Boolean win;
+Boolean gameOver;
 
 void setup() {
   size(701, 851);
