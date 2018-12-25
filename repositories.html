@@ -13,8 +13,9 @@ layout: default
 	<h1 style="margin-top:20px">My-Processing-Sketches</h1>
 	<p> This GitHub repository was created for me to manage and keep track of my Processing projects, which are usually called sketches. It contains reproductions of known mathematical and scientific beauties, such as the Mandelbrot Set, and, of course, games. Those games can be found as built .exe files <a href=https://mega.nz/#F!pxcjia5Z!hKMl_mBoQbxlGeUgeqlIIQ>here</a>.</p>
 	<h2>Examples</h2>
-	<h3>(working on your browser thanks to <a href=http://processingjs.org/>Processing.js</a>)</h3>
-	<div id="sketches"></div>
+	<h4>(working on your browser thanks to <a href=http://processingjs.org/>Processing.js</a>)</h4>
+	<div id="sketche"></div>
+	<button onclick="nextSketch()">Click here</button> 
 
 	<h1>joogps.github.io</h1>
 </body>
@@ -24,9 +25,12 @@ layout: default
 	$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
 	$("#navbar").load("navbar.html");
 
-	var sketches = [$("<canvas>").attr("sketches/CircleWaveAnimation/CircleWaveAnimation.pde sketches/CircleWaveAnimation/CircleWave.pde"), $("<canvas>").attr("data-processing-sources", "sketches/Minesweeper/Game/Game.pde sketches/Minesweeper/Game/DrawTile.pde sketches/Minesweeper/Game/LevelSelector.pde sketches/Minesweeper/Game/Tile.pde sketches/Minesweeper/Game/UI.pde"), $("<canvas>").attr("data-processing-sources", "sketches/SierpinskiArrowheadCurve/SierpinskiArrowheadCurve.pde"), $("<canvas>").attr("data-processing-sources", "sketches/WormyPattern/WormyPattern.pde")];
+	var index = 0;
+	var sketches = [$("<canvas>").attr("data-processing-sources", "sketches/CircleWaveAnimation/CircleWaveAnimation.pde sketches/CircleWaveAnimation/CircleWave.pde"), $("<canvas>").attr("data-processing-sources", "sketches/Minesweeper/Game/Game.pde sketches/Minesweeper/Game/DrawTile.pde sketches/Minesweeper/Game/LevelSelector.pde sketches/Minesweeper/Game/Tile.pde sketches/Minesweeper/Game/UI.pde"), $("<canvas>").attr("data-processing-sources", "sketches/SierpinskiArrowheadCurve/SierpinskiArrowheadCurve.pde"), $("<canvas>").attr("data-processing-sources", "sketches/WormyPattern/WormyPattern.pde")];
 
-	for(sketch of sketches)
-	$("#sketches").append(sketch);
+	function nextSketch(){
+		$("#sketch").empty();
+		$("#sketch").append(sketches[index++]);
+	}
 </script>
 </html>
