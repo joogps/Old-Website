@@ -15,7 +15,7 @@ layout: default
 	<h2>Examples</h2>
 	<h3>(working on your browser thanks to <a href=http://processingjs.org/>Processing.js</a>)</h3>
 
-	<iframe id="sketch-page" src="sketches/Minesweeper/minesweeper.html" width="100%" onload="setHeight()"></iframe>
+	<iframe id="sketch-page" src="sketches/Minesweeper/minesweeper.html" width="100%"></iframe>
 	
 	<h1>joogps.github.io</h1>
 </body>
@@ -25,10 +25,10 @@ layout: default
 	$(function(){
 		$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
 		$("#navbar").load("navbar.html");
-	});
 
-	function setHeight(){
-		$("#sketch-page").height($("#sketch-page").contents().find("#sketch").height());
-	}
+		$("#sketch-page").on("load" function(){
+			$("#sketch-page").height($("#sketch-page").contents().find("#sketch").height());
+		});
+	});
 </script>
 </html>
