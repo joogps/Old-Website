@@ -25,7 +25,9 @@ layout: default
 <script src="../jquery.min.js"></script>
 <img src="assets/ProcessingIDE.png" alt="Ambiente de Desenvolvimento Integrado (IDE) do Processing"></img>
 <script>
-	$("#project_tagline").text("Um desenvolvedor em Processing (e talvez umas outras coisas)");
-	$("#navbar").load("./navbar.html");
+	$(function(){
+		$("#project_tagline").text("Um desenvolvedor em Processing (e talvez umas outras coisas)");
+		$("#navbar").load("./navbar.html");
+	}
 </script>
 </html>
