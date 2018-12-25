@@ -26,7 +26,7 @@ layout: default
 
 	var sketches = [$("<canvas>").attr("sketches/CircleWaveAnimation/CircleWaveAnimation.pde sketches/CircleWaveAnimation/CircleWave.pde"), $("<canvas>").attr("data-processing-sources", "sketches/Minesweeper/Game/Game.pde sketches/Minesweeper/Game/DrawTile.pde sketches/Minesweeper/Game/LevelSelector.pde sketches/Minesweeper/Game/Tile.pde sketches/Minesweeper/Game/UI.pde"), $("<canvas>").attr("data-processing-sources", "sketches/SierpinskiArrowheadCurve/SierpinskiArrowheadCurve.pde"), $("<canvas>").attr("data-processing-sources", "sketches/WormyPattern/WormyPattern.pde")];
 
-	for(sketch in sketches)
+	for(sketch of sketches)
 	$("#sketches").append(sketch);
 </script>
 </html>
