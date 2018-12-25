@@ -26,8 +26,10 @@ layout: default
 		$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
 		$("#navbar").load("navbar.html");
 
-		$("#sketch-page").contents().find("#sketch").on("load", function(){
-			$("#sketch-page").height($("#sketch-page").contents().find("#sketch").height());
+		$("#sketch-page").on("load", function(){
+			$("#sketch-page").contents().find("#sketch").on("load", function(){
+				$("#sketch-page").height($("#sketch-page").contents().find("#sketch").height());
+			});
 		});
 	});
 </script>
