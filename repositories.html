@@ -25,13 +25,19 @@ layout: default
 	$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
 	$("#navbar").load("navbar.html");
 
-	var files = ["sketches/Minesweeper/Game/Game.pde sketches/Minesweeper/Game/DrawTile.pde sketches/Minesweeper/Game/LevelSelector.pde sketches/Minesweeper/Game/Tile.pde sketches/Minesweeper/Game/UI.pde"]
+	var files = ["sketches/Minesweeper/Game/Game.pde sketches/Minesweeper/Game/DrawTile.pde sketches/Minesweeper/Game/LevelSelector.pde sketches/Minesweeper/Game/Tile.pde sketches/Minesweeper/Game/UI.pde", "sketches/CircleWaveAnimation/CircleWaveAnimation.pde sketches/CircleWaveAnimation/CircleWave.pde"]
 
 	var sketches = [];
 	for(file of files){
 		sketches.push($("<canvas>").attr("data-processing-sources", file).attr("tabindex", "0").attr("id", "__processing3").attr("style", "image-rendering: -webkit-optimize-contrast !important;"));
 	}
 
-	$("#sketch").append(sketches[0]);
+	var index = 0;
+
+	$("#sketch").append(sketches[index]);
+
+	void nextSketch(){
+		$("#sketch").append(sketches[++index]);		
+	}
 </script>
 </html>
