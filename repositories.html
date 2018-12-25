@@ -36,13 +36,15 @@ layout: default
 	});
 
 	function previousSketch(){
-			$("#sketch").empty();
-			$("#sketch").append(sketches[index--%=sketches.length]);
-		}
+		$("#sketch").empty();
+		$("#sketch").append(sketches[index--]);
+		index%= sketches.length;
+	}
 
 	function nextSketch(){
-			$("#sketch").empty();
-			$("#sketch").append(sketches[index++%=sketches.length]);
-		}
+		$("#sketch").empty();
+		$("#sketch").append(sketches[index++]);
+		index%= sketches.length;
+	}
 </script>
 </html>	
