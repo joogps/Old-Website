@@ -22,11 +22,10 @@ layout: default
 <script src="jquery.min.js"></script>
 <script src="processing.min.js"></script>
 <script>
-	$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
+	$(function(){
+		$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
 
-	$("#navbar").load("navbar.html");
-
-	$(funciton(){
+		$("#navbar").load("navbar.html");
 		$("#sketch").load("sketches/Minesweeper/minesweeper.html");
 	});
 </script>
