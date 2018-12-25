@@ -16,7 +16,6 @@ layout: default
 	<h3>(working on your browser thanks to <a href=http://processingjs.org/>Processing.js</a>)</h3>
 
 	<div id="sketch"></div>
-	<button onclick="previousSketch()">Previous sketch</button>
 	<button onclick="nextSketch()">Next sketch</button>
 	
 	<h1>joogps.github.io</h1>
@@ -34,12 +33,6 @@ layout: default
 
 		nextSketch();
 	});
-
-	function previousSketch(){
-		$("#sketch").empty();
-		$("#sketch").append(sketches[index--]);
-		index%= sketches.length;
-	}
 
 	function nextSketch(){
 		$("#sketch").empty();
