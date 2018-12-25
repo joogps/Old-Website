@@ -1,11 +1,11 @@
-class CircleWave {
+class WavyCircle {
   PVector pos;
   float r;
   float f;
   float s;
   float h;
 
-  CircleWave() {
+  WavyCircle() {
     pos = new PVector(random(width), random(height));
     r = random(50, (width+height)/4);
     f = TWO_PI/round(random(6, 10));
