@@ -6,17 +6,45 @@ layout: default
 <html>
 <head>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+
+	<style>
+	h1 {
+		margin-top: 20px;
+	}
+
+	#gallery > ul {
+		display: flex;
+		align-items: stretch; /* Default */
+		justify-content: space-between;
+		width: 100%;
+		background: #cacaca;
+		margin: 0;
+		padding: 0;
+	}
+
+	#gallery > ul > li {
+		display: block;
+		flex: 0 1 auto; /* Default */
+		list-style-type: none;
+		background: #fafafa;
+	}
+</style>
 </head>
 <body>
 	<div id="navbar"></div>
 
-	<h1 style="margin-top:20px">My-Processing-Sketches</h1>
+	<h1>My-Processing-Sketches</h1>
 	<p> This GitHub repository was created for me to manage and keep track of my Processing projects, which are usually called sketches. It contains reproductions of known mathematical and scientific beauties, such as the Mandelbrot Set, and, of course, games. Those games can be found as built .exe files <a href=https://mega.nz/#F!pxcjia5Z!hKMl_mBoQbxlGeUgeqlIIQ>here</a>.</p>
 	<h2>Examples</h2>
 	<h3>(working on your browser thanks to <a href=http://processingjs.org/>Processing.js</a>)</h3>
 
-	<div id="sketch"></div>
-	<button onclick="nextSketch()">Next sketch</button>
+	<div id=gallery>
+		<ul>
+			<li><button onclick="nextSketch(-1)">Previous sketch</button></li>
+			<li><button onclick="nextSketch(1)">Next sketch</button></li>
+			<div id="sketch"></div>
+		</ul>
+	</div>
 	
 	<h1>joogps.github.io</h1>
 </body>
@@ -29,15 +57,23 @@ layout: default
 		$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
 		$("#navbar").load("navbar.html");
 
-		sketches = [$("<iframe>", {src: "sketches/Minesweeper/minesweeper.html", width: "100%", height: "760px"}), $("<iframe>", {src: "sketches/CircleWaveAnimation/circlewaveanimation.html", width: "100%", height: "360px"}), $("<iframe>", {src: "sketches/SierpinskiArrowheadCurve/sierpinskiarrowheadcurve.html", width: "100%", height: "554px"}), $("<iframe>", {src: "sketches/WormyPattern/wormypattern.html", width: "100%", height: "640px"})];
+		sketches = [
+		$("<iframe>", {src: "sketches/Minesweeper/minesweeper.html", width: "100%", height: "760px"}), 
+		$("<iframe>", {src: "sketches/CircleWaveAnimation/circlewaveanimation.html", width: "100%", height: "360px"}), 
+		$("<iframe>", {src: "sketches/SierpinskiArrowheadCurve/sierpinskiarrowheadcurve.html", width: "100%", height: "554px"}), 
+		$("<iframe>", {src: "sketches/WormyPattern/wormypattern.html", width: "100%", height: "640px"})];
 
 		nextSketch();
 	});
 
-	function nextSketch(){
+	function nextSketch(var skip){
 		$("#sketch").empty();
-		$("#sketch").append(sketches[index++]);
+		$("#sketch").append(sketches[index]);
+		index+= skip;
 		index%= sketches.length;
+
+		if(index < 0)
+			index = sketches.length-1;
 	}
 </script>
 </html>	
