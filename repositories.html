@@ -35,11 +35,9 @@ layout: default
 
 	var index = 0;
 
-	$("#sketch").append(sketches[index]);
-
 	function nextSketch(){
 		$("#sketch").empty();
-		$("#sketch").append(sketches[++index]);		
+		$("#sketch").append(sketches[index++]);		
 	}
 </script>
 </html>
