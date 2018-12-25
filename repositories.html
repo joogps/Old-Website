@@ -27,8 +27,8 @@ layout: default
 		$("#navbar").load("navbar.html");
 	});
 
-	$("#sketch-page").on("load change", function(){
+	function sketchLoaded(){
 		$("#sketch-page").height($("#sketch-page").contents().find("#sketch").height());
-	});
+	}
 </script>
-</html>
+</html>	
