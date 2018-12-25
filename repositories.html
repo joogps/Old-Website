@@ -31,11 +31,12 @@ layout: default
 
 	#gallery > ul > li > button {
 		background: none;
-		border: none;
 		color: #fff;
-		padding: 10px;
 		height: 100%;
-		font-size: 50px;
+		border: solid black;
+		border-width: 0 3px 3px 0;
+		display: inline-block;
+		padding: 3px;
 	}
 </style>
 </head>
@@ -49,8 +50,8 @@ layout: default
 
 	<div id=gallery>
 		<ul>
-			<li><button onclick="nextSketch(-1)">←</button></li>
-			<li><button onclick="nextSketch(1)">→</button></li>
+			<li><button id="previous" onclick="nextSketch(-1)"></button></li>
+			<li><button id="next" onclick="nextSketch(1)"></button></li>
 		</ul>
 		<div id="sketch"></div>
 	</div>
