@@ -22,19 +22,21 @@ layout: default
 </body>
 <script src="jquery.min.js"></script>
 <script>
+	var sketches;
+	var index = 0;
+
 	$(function(){
 		$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
 		$("#navbar").load("navbar.html");
-
-		var index = 0;
-		var sketches = [$("<iframe>", {src: "sketches/Minesweeper/minesweeper.html", width: "100%", height: "760px"}), $("<iframe>", {src: "sketches/CircleWaveAnimation/circlewaveanimation.html", width: "100%", height: "360px"})];
+		
+		sketches = [$("<iframe>", {src: "sketches/Minesweeper/minesweeper.html", width: "100%", height: "760px"}), $("<iframe>", {src: "sketches/CircleWaveAnimation/circlewaveanimation.html", width: "100%", height: "360px"})];
 
 		nextSketch();
+	});
 
-		function nextSketch(){
+	function nextSketch(){
 			$("#sketch").empty();
 			$("#sketch").append(sketches[index++]);
 		}
-	});
 </script>
 </html>	
