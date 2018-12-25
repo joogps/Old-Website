@@ -24,6 +24,9 @@ layout: default
 	$(function(){
 		$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
 		$("#navbar").load("navbar.html");
+
+		var len = $('script[src="<external JS>"]').length;
+		console.log(len);
 	});
 
 	$(window).on("load", function() {
