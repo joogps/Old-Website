@@ -2,14 +2,19 @@
 <html>
 <head>
 	<style>
-		body {
-			overflow: hidden;
-			margin: 0px;
-		}
-	</style>
+	body {
+		overflow: hidden;
+		margin: 0px;
+	}
+</style>
 </head>
 <body>
 	<canvas id="sketch" data-processing-sources="Game/Game.pde Game/DrawTile.pde Game/LevelSelector.pde Game/Tile.pde Game/UI.pde"></canvas>
 </body>
 <script src="../../processing.min.js"></script>
+<script>
+	window.onload = function() {
+		parent.sketchLoade();
+	}
+</script>
 </html>
