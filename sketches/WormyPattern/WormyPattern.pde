@@ -6,7 +6,7 @@ float spacing;
 void setup() {
   size(640, 640);
 
-  orientation = new float[15][15];
+  orientation = new float[10][10];
   for (int x = 0; x < orientation.length; x++)
     for (int y = 0; y < orientation[x].length; y++)
       orientation[x][y] = HALF_PI*round(random(3));
