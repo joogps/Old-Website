@@ -103,7 +103,7 @@ layout: default
 		$("#gallery > #sketch").empty();
 		$("#gallery > #sketch").append(sketches[index].element);
 
-		$("#gallery > #title").text(sketches[index].title);
+		$("#gallery > #title > a").text(sketches[index].title);
 		$("#gallery > #title > a").attr("href", sketches[index].url);
 
 		index+= skip;
