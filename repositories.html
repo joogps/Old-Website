@@ -69,9 +69,9 @@ layout: default
 
 	<div id=gallery>
 		<ul>
-			<li><button id="previous" onclick="nextSketch(-1)">&#8249;</button></li>
+			<li><button onclick="nextSketch(-1)">&#8249;</button></li>
 			<li id="title"><a>Sketches</a></li>
-			<li><button id="next" onclick="nextSketch(1)">&#8250;</button></li>
+			<li><button onclick="nextSketch(1)">&#8250;</button></li>
 		</ul>
 		<div id="sketch"></div>
 	</div>
@@ -88,23 +88,25 @@ layout: default
 		$("#navbar").load("navbar.html");
 
 		sketches = [
-		$("<iframe>", {src: "sketches/Minesweeper/minesweeper.html", width: "100%", height: "760px"}), 
-		$("<iframe>", {src: "sketches/CircleWaveAnimation/circlewaveanimation.html", width: "100%", height: "360px"}), 
-		$("<iframe>", {src: "sketches/SierpinskiArrowheadCurve/sierpinskiarrowheadcurve.html", width: "100%", height: "554px"}), 
-		$("<iframe>", {src: "sketches/WormyPattern/wormypattern.html", width: "100%", height: "640px"})];
+		{element: $("<iframe>", {src: "sketches/Minesweeper/minesweeper.html", width: "100%", height: "760px"}), title: "Minesweeper", url: ""}, 
+		{element: $("<iframe>", {src: "sketches/CircleWaveAnimation/circlewaveanimation.html", width: "100%", height: "360px"})}, 
+		{element: $("<iframe>", {src: "sketches/SierpinskiArrowheadCurve/sierpinskiarrowheadcurve.html", width: "100%", height: "554px"})}, 
+		{element: $("<iframe>", {src: "sketches/WormyPattern/wormypattern.html", width: "100%", height: "640px"})}];
 
 		nextSketch(1);
 	});
 
 	function nextSketch(skip){
-		$("#sketch").empty();
-		$("#sketch").append(sketches[index]);
-
-		index+= skip;
-
 		if(index < 0)
 			index = sketches.length-1;
 
+		$("#gallery > #sketch").empty();
+		$("#gallery > #sketch").append(sketches[index].element);
+
+		$("#gallery > #title").text(sketches[index].title);
+		$("#gallery > #title > a").attr("href", sketches[index].url);
+
+		index+= skip;
 		index%= sketches.length;
 	}
 </script>
