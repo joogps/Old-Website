@@ -16,6 +16,7 @@ layout: default
 	<h3>(working on your browser thanks to <a href=http://processingjs.org/>Processing.js</a>)</h3>
 
 	<div id="sketch"></div>
+	<button onclick="nextSketch()">Next sketch</button>
 	
 	<h1>joogps.github.io</h1>
 </body>
@@ -25,9 +26,15 @@ layout: default
 		$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
 		$("#navbar").load("navbar.html");
 
-		var sketches = [$("<iframe>", {src: "sketches/Minesweeper/minesweeper.html", width: "100%", height: "360px"})];
+		var index = 0;
+		var sketches = [$("<iframe>", {src: "sketches/Minesweeper/minesweeper.html", width: "100%", height: "760px"}), $("<iframe>", {src: "sketches/CircleWaveAnimation/circlewaveanimation.html", width: "100%", height: "360px"})];
 
-		$("#sketch").append(sketches[0]);
+		nextSketch();
 	});
+
+	function nextSketch(){
+		$("#sketch").empty();
+		$("#sketch").append(index++);
+	}
 </script>
 </html>	
