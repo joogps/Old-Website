@@ -69,11 +69,12 @@ layout: default
 	function nextSketch(skip){
 		$("#sketch").empty();
 		$("#sketch").append(sketches[index]);
-		index+= skip;
-		index%= sketches.length;
-
+		
 		if(index < 0)
 			index = sketches.length-1;
+
+		index+= skip;
+		index%= sketches.length;
 	}
 </script>
 </html>	
