@@ -12,14 +12,19 @@ layout: default
 		margin-top: 20px;
 	}
 
+	#gallery {
+		margin-top: 10px;
+	}
+
 	#gallery > ul {
 		display: flex;
 		align-items: stretch; /* Default */
 		justify-content: space-between;
 		width: 100%;
 		background-color: #333;
-		margin: 0;
+		margin: 2px;
 		padding: 0;
+		height: 30px;
 	}
 
 	#gallery > ul > li {
@@ -46,8 +51,8 @@ layout: default
 
 	<div id=gallery>
 		<ul>
-			<li><button onclick="nextSketch(-1)">Previous sketch</button></li>
-			<li><button onclick="nextSketch(1)">Next sketch</button></li>
+			<li><button onclick="nextSketch(-1)">←</button></li>
+			<li><button onclick="nextSketch(1)">→</button></li>
 		</ul>
 		<div id="sketch"></div>
 	</div>
