@@ -17,7 +17,6 @@ layout: default
 	<canvas data-processing-sources="sketches/CircleWaveAnimation/CircleWaveAnimation.pde sketches/CircleWaveAnimation/CircleWave.pde"></canvas>
 	<canvas data-processing-sources="sketches/Minesweeper/Game/Game.pde sketches/Minesweeper/Game/DrawTile.pde sketches/Minesweeper/Game/LevelSelector.pde sketches/Minesweeper/Game/Tile.pde sketches/Minesweeper/Game/UI.pde"></canvas>
 	<canvas data-processing-sources="sketches/SierpinskiArrowheadCurve/SierpinskiArrowheadCurve.pde"></canvas>
-	<canvas data-processing-sources="sketches/WormyPattern/WormyPattern.pde"></canvas>
 
 	<h1>joogps.github.io</h1>
 </body>
@@ -25,5 +24,9 @@ layout: default
 <script src="processing.min.js"></script>
 <script>
 	$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
-	$("#navbar").load("navbar.html");</script>
+	$("#navbar").load("navbar.html");
+
+	var wormy = $("<canvas>", {data-processing-sources: "sketches/WormyPattern/WormyPattern.pde"});
+	S("body").append(wormy);
+</script>
 </html>
