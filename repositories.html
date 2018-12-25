@@ -14,13 +14,12 @@ layout: default
 	<p> This GitHub repository was created for me to manage and keep track of my Processing projects, which are usually called sketches. It contains reproductions of known mathematical and scientific beauties, such as the Mandelbrot Set, and, of course, games. Those games can be found as built .exe files <a href=https://mega.nz/#F!pxcjia5Z!hKMl_mBoQbxlGeUgeqlIIQ>here</a>.</p>
 	<h2>Examples</h2>
 	<h4>(working on your browser thanks to <a href=http://processingjs.org/>Processing.js</a>)</h4>
-	<canvas id="sketch" data-processing-sources=""></canvas>
+	<canvas id="sketch"></canvas>
 	<button onclick="nextSketch()">Click here</button> 
 
 	<h1>joogps.github.io</h1>
 </body>
 <script src="jquery.min.js"></script>
-<script src="processing.min.js"></script>
 <script>
 	$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
 	$("#navbar").load("navbar.html");
@@ -28,8 +27,7 @@ layout: default
 	var index = 0;
 	var sketches = ["sketches/CircleWaveAnimation/CircleWaveAnimation.pde sketches/CircleWaveAnimation/CircleWave.pde", "sketches/Minesweeper/Game/Game.pde sketches/Minesweeper/Game/DrawTile.pde sketches/Minesweeper/Game/LevelSelector.pde sketches/Minesweeper/Game/Tile.pde sketches/Minesweeper/Game/UI.pde", "sketches/SierpinskiArrowheadCurve/SierpinskiArrowheadCurve.pde","sketches/WormyPattern/WormyPattern.pde"];
 
-	function nextSketch(){
 		$("#sketch").attr("data-procesisng-sources", sketches[index++]);
-	}
 </script>
+<script src="processing.min.js"></script>
 </html>
