@@ -54,7 +54,7 @@ class HUD {
     fill(255-(gridAnimation*(255-150)));
     textFont(timerFont);
     textAlign(LEFT, TOP);
-    autoTextSize(str(timer/1000), width/3, spacing/2);
+    textSize(75);
     text(timer/1000, 15, spacing/2-(textAscent()-textDescent())/2-textDescent());
 
     if (gridAnimation > 0.8)
@@ -73,11 +73,11 @@ class HUD {
     } else {
       gameOverAnimation = lerp(gameOverAnimation, 1, 0.1);
       textAlign(RIGHT, TOP);
+      textSize(75);
 
       if (winner == null) {
         fill(255-(gameOverAnimation*(255-130)));
-
-        autoTextSize("DRAW", width*0.75-textWidth(str(timer/1000))-spacing*0.75*1.5, spacing/2);
+        
         text("DRAW", width-10, spacing/2-(textAscent()-textDescent())/2-textDescent());
 
         fill(255);
@@ -90,7 +90,6 @@ class HUD {
         if (winner == "x") {
           fill(255-(gameOverAnimation*(255-130)));
 
-          autoTextSize("WINS", width*0.75-textWidth(str(timer/1000))-spacing*0.75, spacing/2);
           text("WINS", width-10, spacing/2-(textAscent()-textDescent())/2-textDescent());
 
           fill(255);
@@ -101,7 +100,6 @@ class HUD {
         } else if (winner == "o") {
           fill(255-(gameOverAnimation*(255-130)));
 
-          autoTextSize("WINS", width*0.75-textWidth(str(timer/1000))-spacing*0.75, spacing/2);
           text("WINS", width-10, spacing/2-(textAscent()-textDescent())/2-textDescent());
 
           fill(255);
@@ -169,14 +167,4 @@ class HUD {
     } else
       setGame();
   }
-}
-
-void autoTextSize(String string, float _width, float _height) {
-  float size = 1;
-  textSize(size);
-  while (textWidth(string) < _width && textAscent()-textDescent() < _height) {
-    size+= 0.1;
-    textSize(size);
-  }
-  textSize(size);
 }

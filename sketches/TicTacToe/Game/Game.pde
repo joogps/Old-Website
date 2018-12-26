@@ -19,7 +19,7 @@ void draw() {
 
   checkTie();
 
-  //hud.display();
+  hud.display();
   hud.update();
 
   for (int x = 0; x < grid.length; x++) {
@@ -30,8 +30,6 @@ void draw() {
   }
 
   hud.displayGameOverLine();
-  
-  background(random(255));
 }
 
 void mouseReleased() {
