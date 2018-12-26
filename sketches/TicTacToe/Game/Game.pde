@@ -6,7 +6,7 @@ HUD hud;
 PFont timerFont;
 
 void setup() {
-  size(400, 501);
+  size(640, 800);
   setGame();
 }
 
