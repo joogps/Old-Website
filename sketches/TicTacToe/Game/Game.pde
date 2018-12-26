@@ -37,7 +37,7 @@ void mouseReleased() {
 }
 
 void setGame() {
-  grid = new Tile[3][31];
+  grid = new Tile[3][3];
   hud = new HUD();
 
   if (timerFont == null)
