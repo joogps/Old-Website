@@ -26,8 +26,6 @@ void draw() {
 void setSegments(int num) {
   String binaryString = binary(num, 7);
 
-  console.log(binaryString);
-
   for (int i = 0; i < binaryString.length(); i++)
     segments[i].setState(binaryString.charAt(i) == '1');
 }

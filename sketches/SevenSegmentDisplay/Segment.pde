@@ -38,6 +38,7 @@ class Segment {
     animation = lerp(animation, state ? 1 : 0, 0.2);
 
     console.log(animation);
+    console.log(state);
   }
 
   void setState (boolean s) {
