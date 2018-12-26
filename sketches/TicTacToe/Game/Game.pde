@@ -37,11 +37,11 @@ void mouseReleased() {
 }
 
 void setGame() {
-  grid = new Tile[3][3];
+  grid = new Tile[1][1];
   hud = new HUD();
 
   if (timerFont == null)
-    timerFont = createFont("Assets/ProductSans.ttf", 1);
+    timerFont = createFont("..\\Assets\\ProductSans.ttf", 1);
 
   for (int x = 0; x < grid.length; x++) {
     for (int y = 0; y < grid[x].length; y++) {
