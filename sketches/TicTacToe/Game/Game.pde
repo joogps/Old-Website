@@ -30,6 +30,8 @@ void draw() {
   }
 
   hud.displayGameOverLine();
+  
+  println(frameCount);
 }
 
 void mouseReleased() {
