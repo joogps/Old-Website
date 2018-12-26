@@ -39,10 +39,8 @@ class Segment {
   }
 
   void setState (boolean s) {
-    if (state != s) {
-      state = s;
-      animation = state ? 0 : 1;
-    }
+    state = s;
+    animation = state ? 0 : 1;
   }
 }
 
