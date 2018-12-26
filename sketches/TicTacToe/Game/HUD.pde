@@ -52,7 +52,7 @@ class HUD {
     rect(0, 0, width, spacing);
 
     fill(255-(gridAnimation*(255-150)));
-    //textFont(timerFont);
+    textFont(timerFont);
     textAlign(LEFT, TOP);
     autoTextSize(str(timer/1000), width/3, spacing/2);
     text(timer/1000, 15, spacing/2-(textAscent()-textDescent())/2-textDescent());
