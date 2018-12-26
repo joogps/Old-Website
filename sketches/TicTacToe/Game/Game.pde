@@ -6,7 +6,7 @@ HUD hud;
 PFont timerFont;
 
 void setup() {
-  size(640, 800);
+  size(2, 4);
   setGame();
 }
 
@@ -30,8 +30,6 @@ void draw() {
   }
 
   hud.displayGameOverLine();
-  
-  println(frameCount);
 }
 
 void mouseReleased() {
