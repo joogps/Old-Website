@@ -19,7 +19,7 @@ void draw() {
   for (int i = 0; i < segments.length; i++)
     segments[i].display();
 
-  setSegments(hex[int(frameCount/60)%hex.length]);
+  setSegments(hex[round(frameCount/60)%hex.length]);
 }
 
 void setSegments(int num) {
