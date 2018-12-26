@@ -6,7 +6,7 @@ HUD hud;
 PFont timerFont;
 
 void setup() {
-  size(200, 300);
+  size(200, 4);
   setGame();
 }
 
@@ -37,11 +37,11 @@ void mouseReleased() {
 }
 
 void setGame() {
-  grid = new Tile[1][1];
+  grid = new Tile[3][3];
   hud = new HUD();
 
-  if (timerFont == null)
-    timerFont = createFont("..\\Assets\\ProductSans.ttf", 1);
+  //if (timerFont == null)
+    //timerFont = createFont("Assets/ProductSans.ttf", 1);
 
   for (int x = 0; x < grid.length; x++) {
     for (int y = 0; y < grid[x].length; y++) {
