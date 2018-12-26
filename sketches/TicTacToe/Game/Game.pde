@@ -45,7 +45,7 @@ void setGame() {
 
   for (int x = 0; x < grid.length; x++) {
     for (int y = 0; y < grid[x].length; y++) {
-      grid[x][y] = new Tile(x, y, width/float(grid.length), (height-hud.spacing)/float(grid[0].length));
+      grid[x][y] = new Tile(x, y, (width-1)/float(grid.length), (height-hud.spacing-1)/float(grid[0].length));
     }
   }
 }
