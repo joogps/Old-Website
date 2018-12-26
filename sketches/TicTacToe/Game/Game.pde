@@ -22,12 +22,12 @@ void draw() {
   hud.display();
   hud.update();
 
-  for (int x = 0; x < grid.length; x++) {
-    for (int y = 0; y < grid[x].length; y++) {
+  //for (int x = 0; x < grid.length; x++) {
+    //for (int y = 0; y < grid[x].length; y++) {
       //grid[x][y].display();
       //grid[x][y].update();
-    }
-  }
+    //}
+  //}
 
   //hud.displayGameOverLine();
 }
