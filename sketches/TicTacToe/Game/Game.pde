@@ -24,12 +24,12 @@ void draw() {
 
   for (int x = 0; x < grid.length; x++) {
     for (int y = 0; y < grid[x].length; y++) {
-      grid[x][y].display();
-      grid[x][y].update();
+      //grid[x][y].display();
+      //grid[x][y].update();
     }
   }
 
-  hud.displayGameOverLine();
+  //hud.displayGameOverLine();
 }
 
 void mouseReleased() {
