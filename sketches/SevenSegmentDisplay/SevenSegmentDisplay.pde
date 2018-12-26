@@ -28,6 +28,6 @@ void setSegments(int num) {
 
   for (int i = 0; i < binaryString.length(); i++){
     segments[i].setState(binaryString.charAt(i) == '1');
-    console.log(binaryString.charAt(i) == "1");
+    console.log(binaryString.charAt(i) == '1');
   }
 }
