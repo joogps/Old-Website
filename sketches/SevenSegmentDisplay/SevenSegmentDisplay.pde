@@ -19,9 +19,10 @@ void draw() {
   for (int i = 0; i < segments.length; i++)
     segments[i].display();
 
-  setSegments(hex[round(frameCount/60%hex.length]);
+  if(frameCount%60 == )
+    setSegments(hex[round(frameCount/60%hex.length]));
 
-  console.log(hex[round(frameCount/60%hex.length)]);
+  console.log(hex[round(frameCount/60%hex.length]));
 }
 
 void setSegments(int num) {
