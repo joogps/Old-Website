@@ -21,7 +21,7 @@ void draw() {
 
   setSegments(hex[round(frameCount/60%hex.length]);
 
-  console.log(hex[round(frameCount/60%hex.length]);
+  console.log(hex[round(frameCount/60%hex.length)]);
 }
 
 void setSegments(int num) {
