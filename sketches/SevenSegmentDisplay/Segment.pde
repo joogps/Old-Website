@@ -36,6 +36,8 @@ class Segment {
     popMatrix();
 
     animation = lerp(animation, state ? 1 : 0, 0.2);
+
+    console.log(animation);
   }
 
   void setState (boolean s) {
