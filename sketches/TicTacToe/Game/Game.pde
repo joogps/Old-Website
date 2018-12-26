@@ -19,7 +19,7 @@ void draw() {
 
   //checkTie();
 
-  hud.display();
+  //hud.display();
   //hud.update();
 
   //for (int x = 0; x < grid.length; x++) {
