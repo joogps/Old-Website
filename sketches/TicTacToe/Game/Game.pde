@@ -11,25 +11,27 @@ void setup() {
 }
 
 void draw() {
-  //checkHorizontal();
-  //checkVertical();
+  checkHorizontal();
+  checkVertical();
 
-  //checkDiagonalLeftToRight();
-  //checkDiagonalRightToLeft();
+  checkDiagonalLeftToRight();
+  checkDiagonalRightToLeft();
 
-  //checkTie();
+  checkTie();
 
   //hud.display();
-  //hud.update();
+  hud.update();
 
-  //for (int x = 0; x < grid.length; x++) {
-    //for (int y = 0; y < grid[x].length; y++) {
-      //grid[x][y].display();
-      //grid[x][y].update();
-    //}
-  //}
+  for (int x = 0; x < grid.length; x++) {
+    for (int y = 0; y < grid[x].length; y++) {
+      grid[x][y].display();
+      grid[x][y].update();
+    }
+  }
 
-  //hud.displayGameOverLine();
+  hud.displayGameOverLine();
+  
+  background(random(255));
 }
 
 void mouseReleased() {
@@ -45,7 +47,7 @@ void setGame() {
 
   for (int x = 0; x < grid.length; x++) {
     for (int y = 0; y < grid[x].length; y++) {
-      grid[x][y] = new Tile(x, y, (width-1)/float(grid.length), (height-hud.spacing-1)/float(grid[0].length));
+      grid[x][y] = new Tile(x, y, width/float(grid.length), (height-hud.spacing-1)/float(grid[0].length));
     }
   }
 }
