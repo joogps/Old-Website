@@ -23,8 +23,8 @@ void draw() {
 }
 
 void setSegments(int num) {
-  String binary = binary(num, 7);
+  String binaryString = binary(num, 7);
 
-  for (int i = 0; i < binary.length(); i++)
-    segments[i].setState(binary.charAt(i) == '1');
+  for (int i = 0; i < binaryString.length(); i++)
+    segments[i].setState(binaryString.charAt(i) == '1');
 }
