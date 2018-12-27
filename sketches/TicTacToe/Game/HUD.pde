@@ -55,7 +55,7 @@ class HUD {
     textFont(timerFont);
     textAlign(LEFT, CENTER);
     textSize(75);
-    text(round(timer/1000), 15, spacing/2-textDescent());
+    text(round(timer/1000), 15, spacing/2);
 
     if (gridAnimation > 0.8)
       timerAnimation = lerp(timerAnimation, 1, 0.1);
