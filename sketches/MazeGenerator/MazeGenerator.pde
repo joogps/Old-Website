@@ -8,7 +8,7 @@ boolean complete;
 PVector player;
 
 void setup() {
-  size(362, 362);
+  size(640, 640);
 
   grid = new Cell[30][30];
   for (int x = 0; x < grid.length; x++) {
