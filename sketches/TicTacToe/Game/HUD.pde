@@ -53,9 +53,9 @@ class HUD {
 
     fill(255-(gridAnimation*(255-150)));
     textFont(timerFont);
-    textAlign(LEFT, TOP);
+    textAlign(LEFT, CENTER);
     textSize(75);
-    text(timer/1000, 15, spacing/2-(textAscent()-textDescent())/2-textDescent());
+    text(round(timer/1000), 15, spacing/2-textDescent());
 
     if (gridAnimation > 0.8)
       timerAnimation = lerp(timerAnimation, 1, 0.1);
@@ -72,13 +72,13 @@ class HUD {
         drawO(width-spacing*0.75-10, spacing/2-spacing*0.75/2, spacing*0.75, spacing*0.75, playerAnimation);
     } else {
       gameOverAnimation = lerp(gameOverAnimation, 1, 0.1);
-      textAlign(RIGHT, TOP);
+      textAlign(RIGHT, CENTER);
       textSize(75);
 
       if (winner == null) {
         fill(255-(gameOverAnimation*(255-130)));
         
-        text("DRAW", width-10, spacing/2-(textAscent()-textDescent())/2-textDescent());
+        text("DRAW", width-10, spacing/2-textDescent());
 
         fill(255);
         noStroke();
@@ -90,7 +90,7 @@ class HUD {
         if (winner == "x") {
           fill(255-(gameOverAnimation*(255-130)));
 
-          text("WINS", width-10, spacing/2-(textAscent()-textDescent())/2-textDescent());
+          text("WINS", width-10, spacing/2-textDescent());
 
           fill(255);
           noStroke();
@@ -100,7 +100,7 @@ class HUD {
         } else if (winner == "o") {
           fill(255-(gameOverAnimation*(255-130)));
 
-          text("WINS", width-10, spacing/2-(textAscent()-textDescent())/2-textDescent());
+          text("WINS", width-10, spacing/2-textDescent());
 
           fill(255);
           noStroke();
