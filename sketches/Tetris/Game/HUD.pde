@@ -297,12 +297,9 @@ class HUD {
   }
 }
 
-void autoTextSize(String string, float _width, float _height) {
-  float size = 1;
-  textSize(size);
-  while (textWidth(string) < _width && abs(textAscent() - textDescent()) < _height) {
-    size+= 0.1;
-    textSize(size);
-  }
-  textSize(size);
+void autoTextSize(String str, float w, float h) {
+  textSize(1);
+  float minW = 1/textWidth(str)*w;
+  float minH = 1/(textDescent()+textAscent())*h;
+  textSize(min(minW, minH));
 }
