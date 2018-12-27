@@ -13,7 +13,7 @@ void setup() {
   grid = new Cell[30][30];
   for (int x = 0; x < grid.length; x++) {
     for (int y = 0; y < grid[x].length; y++) {
-      grid[x][y] = new Cell(x, y, (width-1)/float(grid.length), (height-1)/float(grid[x].length));
+      grid[x][y] = new Cell(x, y, width/float(grid.length), height/float(grid[x].length));
     }
   }
 
