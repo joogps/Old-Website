@@ -67,7 +67,7 @@ class Piece {
     frames = frameCount;
     currFrame = frames;
 
-    projectPos = pos.copy();
+    projectPos = new PVector(pos.x, pos.y);
 
     bricks = new Brick[matrix.length][matrix[0].length];
 
