@@ -1,3 +1,5 @@
+/* @pjs font="Assets/VisbyRound.otf" */
+
 Bird bird;
 Score score;
 
@@ -13,7 +15,7 @@ void setup() {
   size(640, 360);
   setGame();
   
-  scoreFont = createFont("..\\Assets\\VisbyRound.otf", 12);
+  scoreFont = createFont("Assets/VisbyRound.otf", 12);
 }
 
 void draw() {
