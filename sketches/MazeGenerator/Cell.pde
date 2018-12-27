@@ -23,7 +23,7 @@ class Cell {
     else
       fill(175);
 
-    rect(x*w, y*h, w, h);
+    rect(x*(w+1), y*(h+1), w, h);
 
     stroke(0);
     if (walls[0])
