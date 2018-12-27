@@ -78,7 +78,7 @@ class HUD {
       if (winner == null) {
         fill(255-(gameOverAnimation*(255-130)));
         
-        text("DRAW", width-10, spacing/2-textDescent());
+        text("DRAW", width-10, spacing/2);
 
         fill(255);
         noStroke();
@@ -90,7 +90,7 @@ class HUD {
         if (winner == "x") {
           fill(255-(gameOverAnimation*(255-130)));
 
-          text("WINS", width-10, spacing/2-textDescent());
+          text("WINS", width-10, spacing/2);
 
           fill(255);
           noStroke();
@@ -100,7 +100,7 @@ class HUD {
         } else if (winner == "o") {
           fill(255-(gameOverAnimation*(255-130)));
 
-          text("WINS", width-10, spacing/2-textDescent());
+          text("WINS", width-10, spacing/2);
 
           fill(255);
           noStroke();
