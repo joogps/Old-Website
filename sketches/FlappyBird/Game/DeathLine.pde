@@ -6,8 +6,8 @@ class DeathLine {
   PVector acc;
 
   DeathLine(PVector _pos, PVector _acc) {
-    pos1 = _pos.copy();
-    pos2 = _pos.copy();
+    pos1 = new PVector(_pos.x, _pos.y);
+    pos2 = new PVector(_pos.x, _pos.y);
 
     vel = new PVector(0, 0);
     acc = _acc;
