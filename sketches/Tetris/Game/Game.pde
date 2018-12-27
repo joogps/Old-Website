@@ -51,7 +51,7 @@ color[] colors = {
 };
 
 void setup() {
-  size(481, 641);
+  size(640, 832);
   setGame(1);
 }
 
