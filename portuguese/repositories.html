@@ -1,0 +1,119 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+	<style>
+	h1, #gallery {
+		margin-top: 20px;
+	}
+
+	#gallery > ul {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		background-color: #333;
+		margin-bottom: 12px;
+		padding: 0;
+		width: 100%;
+		height: 50px;
+	}
+
+	#gallery > ul > li {
+		display: block
+		flex: 0 1 auto;
+		list-style-type: none;
+		color: #fff;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	#gallery > ul > li:hover{
+		background: #111;
+	}
+
+	#gallery > ul > li#title > a {
+		color: #fff;
+		padding: 14px 16px;
+		font-size: 18px;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	#gallery > ul > li > button {
+		background: none;
+		color: #fff;
+		height: 100%;
+		width: 40px;
+		font-size: 30px;
+		border: none;
+	}
+
+	#gallery > ul > li > button:focus{
+		outline: 0;
+	}
+</style>
+</head>
+<body>
+	<div id="navbar"></div>
+
+	<h1><a href="https://github.com/joogps/My-Processing-Sketches">My-Processing-Sketches</a></h1>
+	<p> Este repositório do GitHub foi criado por mim com o propósito de organizar e manter a evolução dos meus projetos em Processing, os quais são geralmente chamados de <i>sketches</i> (racunhos). Ele contém reproduções de belezas matemáticas e científicas conchecidas, visualizações de minha criação, e, é claro, jogos. Esses jogos estão disponíveis como arquivos .exe compilados e compactos <a href=https://mega.nz/#F!pxcjia5Z!hKMl_mBoQbxlGeUgeqlIIQ>aqui</a>.</p>
+	<h2>Exemplos</h2>
+	<h3>(estes exemplos foram levemente modifcados para uma melhor experiência e estão rodando no seu navegador graças ao <a href=http://processingjs.org/>Processing.js</a>)</h3>
+
+	<div id=gallery>
+		<ul>
+			<li><button onclick="nextSketch(-1)">&#8249;</button></li>
+			<li id="title"><a></a></li>
+			<li><button onclick="nextSketch(1)">&#8250;</button></li>
+		</ul>
+		<div id="sketch"></div>
+	</div>
+	
+	<h1>joogps.github.io</h1>
+	<h1>Outros projetos</h1>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+	var sketches;
+	var index = 0;
+
+	$(function(){
+		$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
+		$("#navbar").load("navbar.html");
+
+		sketches = [
+		{element: $("<iframe>", {src: "../sketches/Minesweeper/minesweeper.html", width: "100%", height: "760px"}), title: "Campo Minado", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/Minesweeper"}, 
+		{element: $("<iframe>", {src: "../sketches/WavyCircles/wavycircles.html", width: "100%", height: "360px"}), title: "Círculos Ondulados", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/WavyCircles"},
+		{element: $("<iframe>", {src: "../sketches/SierpinskiArrowheadCurve/sierpinskiarrowheadcurve.html", width: "100%", height: "554px"}), title: "Curva pontuda de Sierpinski", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/SierpinskiArrowheadCurve"}, 
+		{element: $("<iframe>", {src: "../sketches/Wormlike/wormlikepattern.html", width: "100%", height: "640px"}), title: "Padrão \"enminhocado\"", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/WormlikePattern"}, 
+		{element: $("<iframe>", {src: "../sketches/SevenSegmentDisplay/sevensegmentdisplay.html", width: "100%", height: "800px"}), title: "Display de Sete Segmentos", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/SevenSegmentDisplay"}, 
+		{element: $("<iframe>", {src: "../sketches/TicTacToe/tictactoe.html", width: "100%", height: "800px"}), title: "Jogo da Velha", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/TicTacToe"},
+		{element: $("<iframe>", {src: "../sketches/MazeGenerator/mazegenerator.html", width: "100%", height: "640px"}), title: "Gerador de Labirintos", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/MazeGenerator"},
+		{element: $("<iframe>", {src: "../sketches/FlappyBird/flappybird.html", width: "100%", height: "360px"}), title: "Flappy Bird", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/FlappyBird"},
+		{element: $("<iframe>", {src: "../sketches/Tetris/tetris.html", width: "100%", height: "360px"}), title: "Tetris", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/Tetris"}];
+
+		nextSketch(0);
+	});
+
+	function nextSketch(skip){
+		index+= skip;
+		index%= sketches.length;
+
+		if(index < 0)
+			index = sketches.length-1;
+
+		$("#gallery > #sketch").empty();
+		$("#gallery > #sketch").append(sketches[index].element);
+
+		$("#gallery > ul > #title > a").text(sketches[index].title);
+		$("#gallery > ul > #title > a").attr("href", sketches[index].url);
+	}
+</script>
+</html>	
