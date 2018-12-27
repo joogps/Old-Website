@@ -153,7 +153,7 @@ class Piece {
 
   void project() {
     if (fall && !hud.gameOver) {
-      PVector pPos = pos.copy();
+      PVector pPos = new PVector(pos.x, pos.y);
 
       if (fall) {
         boolean stop = false;
