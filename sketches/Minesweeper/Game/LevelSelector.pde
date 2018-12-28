@@ -34,7 +34,7 @@ class LevelSelector {
       textFont(pixelated);
       textAlign(CENTER, CENTER);
       textLeading(15);
-      autoTextSize(levelCols+"\n x"+levelRows, w*2/3.0, h*2/3.0, 2);
+      autoTextSize(levelCols+"\n x"+levelRows, w/3.0, h/3.0, 2);
       text(levelCols+"\n x"+levelRows, position.x+w/2.0, position.y+h/2.0);
     }
   }

@@ -26,7 +26,7 @@ class UI {
 
     textFont(digital);
     textAlign(CENTER, CENTER);
-    autoTextSize("888", width*2/5.0, spacing, 1);
+    autoTextSize("888", width/5.0, spacing/2.0, 1);
 
     fill(60, 0, 0);
     text("888", 20+width/10.0, spacing/2.0-textDescent()/2.0);
