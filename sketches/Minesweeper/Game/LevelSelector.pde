@@ -33,7 +33,7 @@ class LevelSelector {
       fill(selected ? 190 : 90);
       textFont(pixelated);
       textAlign(CENTER, CENTER);
-      textLeading(15);
+      textLeading(8);
       textSize(18);
       text(levelCols+"\n x"+levelRows, position.x+w/2.0, position.y+h/2.0);
     }
