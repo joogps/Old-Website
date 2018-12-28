@@ -14,7 +14,6 @@ class Tile {
 
   Tile(float x, float y, float _w, float _h) {
     position = new PVector(x, y);
-    size = new float[2];
     w = _w;
     h = _h;
   }

@@ -1,4 +1,4 @@
-/* @pjs reload="Assets/bomb.png,Assets/flag.png"; 
+/* @pjs preload="Assets/bomb.png,Assets/flag.png"; 
         font="Assets/digital.otf,Assets/pixelated.otf"; 
 */
 
@@ -37,6 +37,9 @@ void setup() {
   rows = 10;
 
   spacing = height-width;
+
+  surface.setTitle("Minesweeper");
+  surface.setIcon(bomb);
 
   ui = new UI();
   setGame();
@@ -83,9 +86,8 @@ void winGame() {
 
   for (int x = 0; x < cols; x++) {
     for (int y = 0; y < rows; y++) {
-      if (tiles[x][y].isBomb) {
+      if (tiles[x][y].isBomb)
         tiles[x][y].showing = true;
-      }
     }
   }
 }
@@ -96,9 +98,8 @@ void gameOverGame() {
 
   for (int x = 0; x < cols; x++) {
     for (int y = 0; y < rows; y++) {
-      if (tiles[x][y].isBomb) {
+      if (tiles[x][y].isBomb)
         tiles[x][y].showing = true;
-      }
     }
   }
 }
@@ -155,9 +156,8 @@ void setGame() {
       PVector[] tilesToCheck = {new PVector(x + 1, y), new PVector(x - 1, y), new PVector(x, y + 1), new PVector(x, y - 1), new PVector(x + 1, y + 1), new PVector(x - 1, y + 1), new PVector(x + 1, y - 1), new PVector(x - 1, y - 1)};
 
       for (int i = 0; i < tilesToCheck.length; i++) {
-        if (tilesToCheck[i].x >= 0 && tilesToCheck[i].y >= 0 && tilesToCheck[i].x < cols && tilesToCheck[i].y < rows) {
+        if (tilesToCheck[i].x >= 0 && tilesToCheck[i].y >= 0 && tilesToCheck[i].x < cols && tilesToCheck[i].y < rows)
           bombsNear+= tiles[int(tilesToCheck[i].x)][int(tilesToCheck[i].y)].isBomb ? 1 : 0;
-        }
       }
 
       tiles[x][y].bombsNear = bombsNear;
@@ -177,13 +177,11 @@ void checkWin() {
   int numShowing = numBombs;
   for (int x = 0; x < cols; x++) {
     for (int y = 0; y < rows; y++) {
-      if (tiles[x][y].showing) {
+      if (tiles[x][y].showing)
         numShowing++;
-      }
     }
   }
 
-  if (numShowing >= cols*rows) {
+  if (numShowing >= cols*rows)
     winGame();
-  }
 }

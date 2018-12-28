@@ -21,9 +21,9 @@ class LevelSelector {
   }
 
   void show() {
-    if (!beingPressed && !selected) {
+    if (!beingPressed && !selected)
       drawTile(position.x, position.y, w, h);
-    } else {
+    else {
       fill(130);
       stroke(0);
       rect(position.x, position.y, w, h);
@@ -32,9 +32,9 @@ class LevelSelector {
     if (!beingPressed) {
       fill(selected ? 190 : 90);
       textFont(pixelated);
-      textSize(20);
       textAlign(CENTER, CENTER);
       textLeading(15);
+      autoTextSize(levelCols+"\n x"+levelRows, w*2/3.0, h*2/3.0, 2);
       text(levelCols+"\n x"+levelRows, position.x+w/2.0, position.y+h/2.0);
     }
   }
@@ -49,9 +49,9 @@ class LevelSelector {
 
   void checkRelease() {
     if (mouseX > position.x && mouseX < position.x + w && mouseY > position.y && mouseY < position.y + h && mouseButton == LEFT) {
-      for (int i = 0; i < ui.levelSelectors.length; i++) {
+      for (int i = 0; i < ui.levelSelectors.length; i++)
         ui.levelSelectors[i].selected = false;
-      }
+
 
       selected = true;
 
