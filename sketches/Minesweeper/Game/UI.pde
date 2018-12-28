@@ -74,6 +74,6 @@ class UI {
 void autoTextSize(String str, float w, float h, int l) {
   textSize(1);
   float minW = w/textWidth(str);
-  float minH = h/(textDescent()+textAscent())*l;
+  float minH = h/((textDescent()+textAscent())*l);
   textSize(min(minW, minH));
 }
