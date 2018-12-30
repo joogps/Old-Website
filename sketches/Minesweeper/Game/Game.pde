@@ -38,6 +38,9 @@ void setup() {
 
   spacing = height-width;
 
+  surface.setTitle("Minesweeper");
+  surface.setIcon(bomb);
+
   ui = new UI();
   setGame();
 }
