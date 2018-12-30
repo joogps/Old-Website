@@ -6,8 +6,6 @@ class HUD {
 
   float timerAnimation;
 
-  float spacing = 100;
-
   float playerAnimation;
   String currentPlayer;
 
@@ -54,8 +52,8 @@ class HUD {
     fill(255-(gridAnimation*(255-150)));
     textFont(timerFont);
     textAlign(LEFT, CENTER);
-    textSize(75);
-    text(round(timer/1000), 15, spacing/2);
+    autoTextSize(str(round(timer/1000)), width/3.0, spacing*3/4.0, 1);
+    text(round(timer/1000), 15, spacing/2.0-textDescent()/2.0);
 
     if (gridAnimation > 0.8)
       timerAnimation = lerp(timerAnimation, 1, 0.1);
@@ -67,18 +65,18 @@ class HUD {
       playerAnimation = lerp(playerAnimation, 1, 0.075);
 
       if (currentPlayer == "x")
-        drawX(width-spacing*0.75-10, spacing/2-spacing*0.75/2, spacing*0.75, spacing*0.75, playerAnimation);
+        drawX(width-spacing*0.75-10, spacing/2-spacing*0.75/2, spacing*0.8, spacing*0.8, playerAnimation);
       else if (currentPlayer == "o")
-        drawO(width-spacing*0.75-10, spacing/2-spacing*0.75/2, spacing*0.75, spacing*0.75, playerAnimation);
+        drawO(width-spacing*0.75-10, spacing/2-spacing*0.75/2, spacing*0.8, spacing*0.8, playerAnimation);
     } else {
       gameOverAnimation = lerp(gameOverAnimation, 1, 0.1);
       textAlign(RIGHT, CENTER);
-      textSize(75);
 
       if (winner == null) {
         fill(255-(gameOverAnimation*(255-130)));
-        
-        text("DRAW", width-10, spacing/2);
+
+        autoTextSize("DRAW", width/3.0, spacing*3/4.0, 1);
+        text("DRAW", width-10, spacing/2.0-textDescent()/2.0);
 
         fill(255);
         noStroke();
@@ -90,7 +88,8 @@ class HUD {
         if (winner == "x") {
           fill(255-(gameOverAnimation*(255-130)));
 
-          text("WINS", width-10, spacing/2);
+          autoTextSize("WINS", width/3.0, spacing*3/4.0, 1);
+          text("WINS", width-10, spacing/2.0-textDescent()/2.0);
 
           fill(255);
           noStroke();
@@ -100,7 +99,8 @@ class HUD {
         } else if (winner == "o") {
           fill(255-(gameOverAnimation*(255-130)));
 
-          text("WINS", width-10, spacing/2);
+          autoTextSize("WINS", width/3.0, spacing*3/4.0, 1);
+          text("WINS", width-10, spacing/2.0-textDescent()/2.0);
 
           fill(255);
           noStroke();
@@ -167,4 +167,11 @@ class HUD {
     } else
       setGame();
   }
+}
+
+void autoTextSize(String str, float w, float h, int l) {
+  textSize(1);
+  float minW = w/textWidth(str);
+  float minH = h/float(l);
+  textSize(min(minW, minH));
 }
