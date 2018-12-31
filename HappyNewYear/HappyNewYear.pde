@@ -39,7 +39,7 @@ void draw() {
   }
 }
 
-void autoTextSize(String str, float w, float h, int l) {
+float autoTextSize(String str, float w, float h, int l) {
   textSize(1);
   float minW = w/textWidth(str);
   float minH = h/float(l);
