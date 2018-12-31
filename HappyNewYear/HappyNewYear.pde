@@ -22,7 +22,7 @@ void draw() {
     float size = 1-((hoursLeft*60*60+minutesLeft*60+secondsLeft)/86400.0);
 
     textSize(size*70);
-    text(hoursLeft+":"+minutesLeft+":"+secondsLeft, width/2, height/2);
+    text(nf(hoursLeft, 2)+":"+nf(minutesLeft, 2)+":"+nf(secondsLeft, 2), width/2, height/2);
   } else {
     textSize(70);
     text("Happy 2019!", width/2, height/2);
