@@ -2,7 +2,7 @@ ArrayList<Firework> fireworks;
 PFont font;
 
 void setup() {
-  size(900, 460);
+  size(1136, 640);
   colorMode(HSB);
 
   fireworks = new ArrayList();
