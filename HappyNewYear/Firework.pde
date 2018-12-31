@@ -27,7 +27,7 @@ class Firework {
     strokeWeight(size);
     stroke(hue, 255, 255, alpha);
     
-    point(pos.x, pos.y);
+    //point(pos.x, pos.y);
   }
 
   void update() {
