@@ -2,7 +2,7 @@ ArrayList<Firework> fireworks;
 PFont font;
 
 void setup() {
-  size(1136, 640);
+  size(window.innerWidth, window.innerHeight);
   colorMode(HSB);
 
   fireworks = new ArrayList();
@@ -21,11 +21,11 @@ void draw() {
 
     float size = 1-((hoursLeft*60*60+minutesLeft*60+secondsLeft)/86400.0);
 
-    textSize(size*70);
+    textSize(autoTextSize(nf(hoursLeft, 2)+":"+nf(minutesLeft, 2)+":"+nf(secondsLeft, 2), width*3/4.0, height/2.0, 1)*size);
     text(nf(hoursLeft, 2)+":"+nf(minutesLeft, 2)+":"+nf(secondsLeft, 2), width/2, height/2);
   } else {
-    textSize(70);
-    text("Happy 2019!", width/2, height/2);
+    textSize("Happy 2019!", width*3/4.0, height/2.0, 1)*size);
+    text("Happy 2019!", width/2.0, height/2.0);
 
     for (int i = 0; i < fireworks.size(); i++) {
       if (fireworks.get(i) != null) {
@@ -37,4 +37,13 @@ void draw() {
     if (frameCount%30 == 0 || random(1) < 0.01)
       fireworks.add(new Firework(new PVector(random(width), height), new PVector(0, random(-10, -50)), random(255), round(random(1, 2.5)), fireworks.size()));
   }
+}
+
+void autoTextSize(String str, float w, float h, int l) {
+  textSize(1);
+  float minW = w/textWidth(str);
+  float minH = h/float(l);
+  textSize(min(minW, minH));
+  
+  return min(minW, minH);
 }
