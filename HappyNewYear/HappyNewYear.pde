@@ -14,18 +14,18 @@ void draw() {
   textFont(font);
   textAlign(CENTER, CENTER);
 
-  if (day() != 1) {
+  if (day() == 31 && month() == 12) {
     int hoursLeft = 23-hour();
     int minutesLeft = 59-minute();
     int secondsLeft = 59-second();
 
     float size = 1-((hoursLeft*60*60+minutesLeft*60+secondsLeft)/86400.0);
 
-    textSize(autoTextSize(nf(hoursLeft, 2)+":"+nf(minutesLeft, 2)+":"+nf(secondsLeft, 2), width*3/4.0, height/2.0, 1)*size);
+    textSize(autoTextSize(nf(hoursLeft, 2)+":"+nf(minutesLeft, 2)+":"+nf(secondsLeft, 2), width/2.0, height/2.0, 1)*size);
     text(nf(hoursLeft, 2)+":"+nf(minutesLeft, 2)+":"+nf(secondsLeft, 2), width/2, height/2);
   } else {
-    autoTextSize("Happy 2019!", width*3/4.0, height/2.0, 1);
-    text("Happy 2019!", width/2.0, height/2.0);
+    autoTextSize("Happy "+year()+"!", width*3/4.0, height/2.0, 1);
+    text("Happy "+year()+"!", width/2.0, height/2.0);
 
     for (int i = 0; i < fireworks.size(); i++) {
       if (fireworks.get(i) != null) {
