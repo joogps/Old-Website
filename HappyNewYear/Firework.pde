@@ -46,7 +46,7 @@ class Firework {
     float childrenHue = random(255);
 
     for (int i = 0; i < children; i++)
-      fireworks.add(new Firework(new PVector(pos.x, pos.y), new PVector(cos(TWO_PI*i/float(children)), sin(TWO_PI*i/float(children))).mult(size*1.5), childrenHue, random(2) < 0.5 ? level-1 : 0, fireworks.size()));
+      fireworks.add(new Firework(pos.copy(), new PVector(cos(TWO_PI*i/float(children)), sin(TWO_PI*i/float(children))).mult(size*1.5), childrenHue, random(2) < 0.5 ? level-1 : 0, fireworks.size()));
 
     fireworks.set(index, null);
   }
