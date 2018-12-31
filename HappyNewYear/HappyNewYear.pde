@@ -14,7 +14,7 @@ void draw() {
   textFont(font);
   textAlign(CENTER, CENTER);
 
-  if (day() == 31 && month() == 12 && false) {
+  if (day() == 31 && month() == 12) {
     int hoursLeft = 23-hour();
     int minutesLeft = 59-minute();
     int secondsLeft = 59-second();
