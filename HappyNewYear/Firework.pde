@@ -31,8 +31,8 @@ class Firework {
   }
 
   void update() {
-    //pos.add(vel);
-    //vel.mult(0.95);
+    pos.add(new PVector(vel.x, vel.y));
+    vel.mult(0.95);
 
     alpha = lerp(alpha, 0, 0.05);
     hue+= 0.1;
