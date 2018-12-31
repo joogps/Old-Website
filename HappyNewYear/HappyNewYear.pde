@@ -19,7 +19,7 @@ void draw() {
     int minutesLeft = 59-minute();
     int secondsLeft = 59-second();
 
-    float size = ((hour()*60*60+minutes()*60+seconds())/86400.0);
+    float size = ((hour()*60*60+minute()*60+second())/86400.0);
 
     textSize(autoTextSize(nf(hoursLeft, 2)+":"+nf(minutesLeft, 2)+":"+nf(secondsLeft, 2), width*5/8.0, height/2.0, 1)*size);
     text(nf(hoursLeft, 2)+":"+nf(minutesLeft, 2)+":"+nf(secondsLeft, 2), width/2, height/2);
