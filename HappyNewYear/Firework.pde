@@ -11,8 +11,8 @@ class Firework {
   int index;
 
   Firework(PVector p, PVector v, float h, int l, int i) {
-    pos = p;
-    vel = v;
+    pos = new PVector(p.x, p.y);
+    vel = new PVector(v.x, v.y);
 
     size = random(3, 10);
 
@@ -31,7 +31,7 @@ class Firework {
   }
 
   void update() {
-    pos.add(new PVector(vel.x, vel.y));
+    pos.add(vel);
     vel.mult(0.95);
 
     alpha = lerp(alpha, 0, 0.05);
