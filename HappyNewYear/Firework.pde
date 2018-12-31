@@ -27,7 +27,7 @@ class Firework {
     strokeWeight(size);
     stroke(hue, 255, 255, alpha);
     
-    //point(pos.x, pos.y);
+    point(pos.x, pos.y);
   }
 
   void update() {
@@ -46,7 +46,7 @@ class Firework {
     float childrenHue = random(255);
 
     for (int i = 0; i < children; i++)
-      fireworks.add(new Firework(new PVector(0, 0), new PVector(cos(TWO_PI*i/float(children)), sin(TWO_PI*i/float(children))).mult(size*1.5), childrenHue, random(2) < 0.5 ? level-1 : 0, fireworks.size()));
+      fireworks.add(new Firework(new PVector(pos.x, pos.y), new PVector(0, 0).mult(size*1.5), childrenHue, random(2) < 0.5 ? level-1 : 0, fireworks.size()));
 
     fireworks.set(index, null);
   }
