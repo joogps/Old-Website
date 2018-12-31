@@ -31,7 +31,7 @@ class Firework {
   }
 
   void update() {
-    pos.add(vel);
+    //pos.add(vel);
     //vel.mult(0.95);
 
     alpha = lerp(alpha, 0, 0.05);
