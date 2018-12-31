@@ -24,7 +24,7 @@ void draw() {
     textSize(autoTextSize(nf(hoursLeft, 2)+":"+nf(minutesLeft, 2)+":"+nf(secondsLeft, 2), width*3/4.0, height/2.0, 1)*size);
     text(nf(hoursLeft, 2)+":"+nf(minutesLeft, 2)+":"+nf(secondsLeft, 2), width/2, height/2);
   } else {
-    textSize("Happy 2019!", width*3/4.0, height/2.0, 1)*size);
+    autoTextSize("Happy 2019!", width*3/4.0, height/2.0, 1);
     text("Happy 2019!", width/2.0, height/2.0);
 
     for (int i = 0; i < fireworks.size(); i++) {
