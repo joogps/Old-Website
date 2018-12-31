@@ -14,7 +14,7 @@ void draw() {
   textFont(font);
   textAlign(CENTER, CENTER);
 
-  if (day() != 1) {
+  if (day() == 1) {
     int hoursLeft = 23-hour();
     int minutesLeft = 59-minute();
     int secondsLeft = 59-second();
