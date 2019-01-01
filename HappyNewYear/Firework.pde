@@ -35,8 +35,8 @@ class Firework {
     alpha = lerp(alpha, 0, 0.025);
     hue+= 0.1;
 
-    if (alpha < 10){
-      if(level > 0)
+    if (alpha < 10) {
+      if (level > 0)
         recreate();
       
       fireworks.remove(i);
