@@ -13,6 +13,8 @@ void draw() {
   background(0);
   textFont(font);
   textAlign(CENTER, CENTER);
+  
+  console.log(fireworks.size());
 
   if (day() == 31 && month() == 12) {
     int hoursLeft = 23-hour();
