@@ -1,4 +1,4 @@
-/* @pjs font="font.ttf"; */
+/* @pjs font="./font.ttf"; */
 
 ArrayList<Firework> fireworks;
 PFont font;
