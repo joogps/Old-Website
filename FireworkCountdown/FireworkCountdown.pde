@@ -8,7 +8,7 @@ void setup() {
   colorMode(HSB);
 
   fireworks = new ArrayList();
-  font = createFont("fireworkfont.ttf", 12);
+  font = createFont("../data/fireworkfont.ttf", 12);
 }
 
 void draw() {
