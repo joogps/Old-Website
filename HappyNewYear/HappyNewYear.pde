@@ -35,7 +35,7 @@ void draw() {
     }
 
     if (frameCount%30 == 0 || random(1) < 0.01)
-      fireworks.add(new Firework(new PVector(random(width), height), new PVector(0, random(-10, -50)), random(255), round(random(1, 2.5)), fireworks.size()));
+      fireworks.add(new Firework(new PVector(random(width), height), new PVector(0, random(-height/64.0, -height/12.0)), random(255), round(random(1, 2.5)), fireworks.size()));
   }
 }
 
