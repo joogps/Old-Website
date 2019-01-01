@@ -1,4 +1,4 @@
-/* @pjs font="Product_Sans_Bold.ttf"; */
+/* @pjs font="font.ttf"; */
 
 ArrayList<Firework> fireworks;
 PFont font;
@@ -8,7 +8,7 @@ void setup() {
   colorMode(HSB);
 
   fireworks = new ArrayList();
-  font = createFont("Product_Sans_Bold.ttf", 12);
+  font = createFont("font.ttf", 12);
 }
 
 void draw() {
