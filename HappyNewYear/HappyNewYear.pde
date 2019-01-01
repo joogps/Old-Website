@@ -30,13 +30,12 @@ void draw() {
     for (int i = 0; i < fireworks.size(); i++) {
       if (fireworks.get(i) != null) {
         fireworks.get(i).display();
-        fireworks.get(i).update();
-        fireworks.get(i).kill(i);
+        fireworks.get(i).update(i);
       }
     }
 
     if (frameCount%30 == 0 || random(1) < 0.01)
-      fireworks.add(new Firework(new PVector(random(width), height), new PVector(0, random(-height/80.0, -height/20.0)), random(255), round(random(1, 2.5)), fireworks.size()));
+      fireworks.add(new Firework(new PVector(random(width), height), new PVector(0, random(-height/80.0, -height/20.0)), random(255), round(random(1, 2.5))));
   }
 }
 
