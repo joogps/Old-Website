@@ -1,3 +1,5 @@
+/* @pjs font="Product Sans Bold.ttf"; */
+
 ArrayList<Firework> fireworks;
 PFont font;
 
