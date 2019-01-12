@@ -78,41 +78,41 @@ layout: default
 	
 	<h1>joogps.github.io</h1>
 	<h1>Other projects</h1>
+	<script src="jquery.min.js"></script>
+	<script>
+		var sketches;
+		var index = 0;
+
+		$(function(){
+			$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
+			$("#navbar").load("navbar.html");
+
+			sketches = [
+			{element: $("<iframe>", {src: "sketches/Minesweeper/minesweeper.html", width: "100%", height: "760px"}), title: "Minesweeper", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/Minesweeper"}, 
+			{element: $("<iframe>", {src: "sketches/WavyCircles/wavycircles.html", width: "100%", height: "360px"}), title: "Wavy Circles", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/WavyCircles"},
+			{element: $("<iframe>", {src: "sketches/SierpinskiArrowheadCurve/sierpinskiarrowheadcurve.html", width: "100%", height: "554px"}), title: "Sirepinski Arrowhead Curve", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/SierpinskiArrowheadCurve"}, 
+			{element: $("<iframe>", {src: "sketches/Wormlike/wormlikepattern.html", width: "100%", height: "640px"}), title: "Wormlike Pattern", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/WormlikePattern"}, 
+			{element: $("<iframe>", {src: "sketches/SevenSegmentDisplay/sevensegmentdisplay.html", width: "100%", height: "800px"}), title: "Seven Segment Display", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/SevenSegmentDisplay"}, 
+			{element: $("<iframe>", {src: "sketches/TicTacToe/tictactoe.html", width: "100%", height: "800px"}), title: "Tic Tac Toe", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/TicTacToe"},
+			{element: $("<iframe>", {src: "sketches/MazeGenerator/mazegenerator.html", width: "100%", height: "640px"}), title: "Maze Generator", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/MazeGenerator"},
+			{element: $("<iframe>", {src: "sketches/FlappyBird/flappybird.html", width: "100%", height: "360px"}), title: "Flappy Bird", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/FlappyBird"}];
+
+			nextSketch(0);
+		});
+
+		function nextSketch(skip){
+			index+= skip;
+			index%= sketches.length;
+
+			if(index < 0)
+				index = sketches.length-1;
+
+			$("#gallery > #sketch").empty();
+			$("#gallery > #sketch").append(sketches[index].element);
+
+			$("#gallery > ul > #title > a").text(sketches[index].title);
+			$("#gallery > ul > #title > a").attr("href", sketches[index].url);
+		}
+	</script>
 </body>
-<script src="jquery.min.js"></script>
-<script>
-	var sketches;
-	var index = 0;
-
-	$(function(){
-		$("#project_tagline").html("A Processing delveloper (and maybe some other stuff)");
-		$("#navbar").load("navbar.html");
-
-		sketches = [
-		{element: $("<iframe>", {src: "sketches/Minesweeper/minesweeper.html", width: "100%", height: "760px"}), title: "Minesweeper", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/Minesweeper"}, 
-		{element: $("<iframe>", {src: "sketches/WavyCircles/wavycircles.html", width: "100%", height: "360px"}), title: "Wavy Circles", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/WavyCircles"},
-		{element: $("<iframe>", {src: "sketches/SierpinskiArrowheadCurve/sierpinskiarrowheadcurve.html", width: "100%", height: "554px"}), title: "Sirepinski Arrowhead Curve", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/SierpinskiArrowheadCurve"}, 
-		{element: $("<iframe>", {src: "sketches/Wormlike/wormlikepattern.html", width: "100%", height: "640px"}), title: "Wormlike Pattern", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/WormlikePattern"}, 
-		{element: $("<iframe>", {src: "sketches/SevenSegmentDisplay/sevensegmentdisplay.html", width: "100%", height: "800px"}), title: "Seven Segment Display", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/SevenSegmentDisplay"}, 
-		{element: $("<iframe>", {src: "sketches/TicTacToe/tictactoe.html", width: "100%", height: "800px"}), title: "Tic Tac Toe", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/TicTacToe"},
-		{element: $("<iframe>", {src: "sketches/MazeGenerator/mazegenerator.html", width: "100%", height: "640px"}), title: "Maze Generator", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/MazeGenerator"},
-		{element: $("<iframe>", {src: "sketches/FlappyBird/flappybird.html", width: "100%", height: "360px"}), title: "Flappy Bird", url: "https://github.com/joogps/My-Processing-Sketches/tree/master/FlappyBird"}];
-
-		nextSketch(0);
-	});
-
-	function nextSketch(skip){
-		index+= skip;
-		index%= sketches.length;
-
-		if(index < 0)
-			index = sketches.length-1;
-
-		$("#gallery > #sketch").empty();
-		$("#gallery > #sketch").append(sketches[index].element);
-
-		$("#gallery > ul > #title > a").text(sketches[index].title);
-		$("#gallery > ul > #title > a").attr("href", sketches[index].url);
-	}
-</script>
 </html>	
