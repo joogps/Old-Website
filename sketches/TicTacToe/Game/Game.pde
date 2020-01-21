@@ -1,4 +1,4 @@
-/* @pjs font="Assets/ProductSans.ttf" */
+/* @pjs font="Assets/Nunito-SemiBold.ttf" */
 
 Tile[][] grid;
 HUD hud;
@@ -10,7 +10,7 @@ float spacing;
 void setup() {
   size(640, 760);
 
-  timerFont = createFont("Assets/ProductSans.ttf", 1);
+  timerFont = createFont("Assets/Nunito-SemiBold.ttf", 1);
   spacing = height-width;
 
   setGame();
